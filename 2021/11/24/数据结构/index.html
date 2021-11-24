@@ -22,7 +22,7 @@
 
   
 
-  <title>life | 寻玉</title>
+  <title>数据结构 | 寻玉</title>
 
   
 
@@ -96,11 +96,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">life</h1>
+          <h1 class="title-wrap">数据结构</h1>
           <h2 class="title-sub-wrap">
             <strong>infinite</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-23T13:32:35.000Z" itemprop="datePublished">2021-11-23</time>
+            <time  class="article-date" datetime="2021-11-24T00:01:09.309Z" itemprop="datePublished">2021-11-24</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -129,35 +129,31 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="hope-everyone-can-have-a-happy-life"><a href="#hope-everyone-can-have-a-happy-life" class="headerlink" title="hope everyone can have a happy life"></a>hope everyone can have a happy life</h2>
+        <p>数据结构，狗都不学</p>
+<hr>
+<h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="1-2-基本概念和术语"><a href="#1-2-基本概念和术语" class="headerlink" title="1.2 基本概念和术语"></a>1.2 基本概念和术语</h2><ul>
+<li>数据： 被计算机加工处理的对象。</li>
+<li>数据元素（记录、表目）：数据的基本单位，是数据集合中的一个个体。</li>
+<li>一个数据元素可由若干个数据线组成。</li>
+<li>数据类型：在一种程序设计语言中，变量所具有的数据种类。</li>
+<li>数据对象：是性质相同的数据元素的集合，是数据的一个子集。（某种数据类型元素的集合。）<em>数据对象可以是有限的，也可以是无限的。</em></li>
+<li></li>
+</ul>
+
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/11/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">数据结构</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/11/23/next/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">next</h2>
+        <a href="/2021/11/23/life/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">life</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -321,70 +317,7 @@
   <!-- aplayer -->
 
 
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: false,
-          loop: false,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
-
-
 <!-- dplayer -->
-
-
-<!-- dplayer 视频 start -->
-<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
-<script type="text/javascript">
-  const dplayer = document.querySelectorAll(".dplayer-box");
-  dplayer && initDPlayer(dplayer);
-  function initDPlayer(els) {
-    let elsArr = Array.from(els);
-    elsArr.forEach(el => {
-      let url = el.dataset.url;
-      let pic = el.dataset.pic;
-      let subtitle = el.dataset.subtitle;
-
-      let options = {
-        container: el,
-        video: { url: url, pic: pic },
-        theme: "#b7daff",
-        autoplay: false,
-        loop: false,
-        mutex: true,
-      }
-
-      if (subtitle) {
-        options.subtitle = {
-          url: el.dataset.subtitle,
-        }
-      }
-      new DPlayer(options);
-    });
-  }
-</script>
-<!-- dplayer 视频 end -->
-
 
 
 
