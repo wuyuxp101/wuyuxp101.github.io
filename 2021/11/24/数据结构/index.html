@@ -224,9 +224,55 @@
 <li><strong>时间复杂度</strong>：若有某个辅助函数*f(n),<em>使得当n趋近于无穷大时，T(n)/f(n)的极限值为不等于零的常数，则称</em>f(n)*是T(n)的同数量级函数（记作T(n) =Ｏ(<em>f(n)</em> ) ，称O(<em>f(n)</em>) 为算法的渐近时间复杂度，简称时间复杂度。</li>
 <li><strong>空间复杂度</strong>：算法所需存储空间的度量，记作S(n)=O(f(n))。</li>
 </ul>
-<h1 id="第二章-线性表"><a href="#第二章-线性表" class="headerlink" title="第二章 线性表"></a>第二章 线性表</h1><h1 id="第三章-栈和队列"><a href="#第三章-栈和队列" class="headerlink" title="第三章 栈和队列"></a>第三章 栈和队列</h1><h1 id="第五章-数组和广义表"><a href="#第五章-数组和广义表" class="headerlink" title="第五章 数组和广义表"></a>第五章 数组和广义表</h1><h1 id="第六章-树"><a href="#第六章-树" class="headerlink" title="第六章 树"></a>第六章 树</h1><hr>
+<h1 id="第二章-线性表"><a href="#第二章-线性表" class="headerlink" title="第二章 线性表"></a>第二章 线性表</h1><h1 id="第三章-栈和队列"><a href="#第三章-栈和队列" class="headerlink" title="第三章 栈和队列"></a>第三章 栈和队列</h1><h1 id="第五章-数组和广义表"><a href="#第五章-数组和广义表" class="headerlink" title="第五章 数组和广义表"></a>第五章 数组和广义表</h1><h1 id="第六章-树和二叉树"><a href="#第六章-树和二叉树" class="headerlink" title="第六章 树和二叉树"></a>第六章 树和二叉树</h1><h2 id="6-1-树的结构定义和基本操作"><a href="#6-1-树的结构定义和基本操作" class="headerlink" title="6.1 树的结构定义和基本操作"></a>6.1 树的结构定义和基本操作</h2><ul>
+<li><p><strong>树</strong>是由n(n³0)个结点组成的有限集合T，非空树满足</p>
+<blockquote>
+<p>  a) 有一个称之为<strong>根</strong>**(**root)的结点</p>
+<p>  b) 除根以外的其余结点被分成m(0£m&lt;n)个互不相交的集合T1， T2 ,…， Tm，其中每一个集合本身又是一棵树，且称为根的<strong>子树</strong></p>
+</blockquote>
+</li>
+<li><p>树除根结点外，每个结点都仅有一个前趋结点。</p>
+</li>
+<li><p>树的基本术语</p>
+<blockquote>
+<p><strong>结点的度</strong>  结点拥有的子树数目。</p>
+<p><strong>叶子</strong>**(<strong><strong>终端</strong></strong>)**<strong>结点</strong>  度为0的结点。</p>
+<p><strong>分支</strong>**(<strong><strong>非终端</strong></strong>)**<strong>结点</strong>  度不为0的结点。</p>
+<p><strong>树的度</strong>  树的各结点度的最大值。</p>
+<p><strong>内部结点</strong>  除根结点之外的分支结点。</p>
+<p><strong>双亲与孩子</strong>**(<strong><strong>父与子</strong></strong>)**<strong>结点</strong>  结点的子树的根称为该结点的孩子；该结点称为孩子的双亲.</p>
+<p><strong>兄弟</strong>  属于同一双亲的孩子。</p>
+<p><strong>结点的祖先</strong>  从根到该结点所经分支上的所有结点。</p>
+<p><strong>结点的子孙</strong>  该结点为根的子树中的任一结点。</p>
+<p><strong>结点的层次</strong>  表示该结点在树中的相对位置。根为第一层，其它的结点依次下推；若某结点在第L层上，则其孩子在第L+1层上。</p>
+<p><strong>堂兄弟</strong>  双亲在同一层的结点互为堂兄弟。</p>
+<p><strong>树的深</strong>**(<strong><strong>高</strong></strong>)**<strong>度</strong>  树中结点的最大层次。</p>
+<p><strong>有序树</strong>  树中各结点的子树从左至右是有次序的，不能互换。否则，称为<strong>无序树</strong>。</p>
+<p><strong>路径长度</strong>  从树中某结点Ni出发，能够“自上而下地”通过树中结点到达结点Nj，则称Ni到Nj存在一条路径，路径长度等于这两个结点之间的分支数。</p>
+<p><strong>树的路径长度</strong>  从根到每个结点的路径长度之和。</p>
+<p><strong>森林</strong>  是m(m³0)棵互不相交的树的集合。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="6-2-二叉树"><a href="#6-2-二叉树" class="headerlink" title="6.2 二叉树"></a>6.2 二叉树</h2><ul>
+<li><p><strong>二叉树的定义</strong> 二叉树是n(n³0)个结点的有限集合，它或为<strong>空树</strong>(n=0)，或由一个<strong>根</strong>结点和两棵互不相交的<strong>左子树</strong>和<strong>右子树</strong>的二叉树组成。</p>
+</li>
+<li><p><strong>二叉树的特点</strong></p>
+<ol>
+<li><p>定义是递归的</p>
+</li>
+<li><p>结点的度£2</p>
+</li>
+<li><p>是有序树</p>
+</li>
+</ol>
+</li>
+<li><p>二叉树的每个结点至多只有两棵子树，且子树有左右之分，其次序不能任意颠倒。</p>
+</li>
+<li></li>
+</ul>
+<h2 id="6-3-遍历二叉树"><a href="#6-3-遍历二叉树" class="headerlink" title="6.3 遍历二叉树"></a>6.3 遍历二叉树</h2><h2 id="6-4-线索二叉树"><a href="#6-4-线索二叉树" class="headerlink" title="6.4 线索二叉树"></a>6.4 线索二叉树</h2><h2 id="6-5-哈夫曼树及其应用"><a href="#6-5-哈夫曼树及其应用" class="headerlink" title="6.5 哈夫曼树及其应用"></a>6.5 哈夫曼树及其应用</h2><h2 id="6-6-树和森林"><a href="#6-6-树和森林" class="headerlink" title="6.6 树和森林"></a>6.6 树和森林</h2><h2 id="6-7-二叉树和树的应用实例"><a href="#6-7-二叉树和树的应用实例" class="headerlink" title="6.7 二叉树和树的应用实例"></a>6.7 二叉树和树的应用实例</h2><hr>
 <p>未完待续</p>
-<p>[^这是一条隐藏的消息 ]: </p>
 
       </section>
 
