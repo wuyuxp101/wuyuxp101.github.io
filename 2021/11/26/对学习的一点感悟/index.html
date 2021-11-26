@@ -24,7 +24,7 @@
 
   
 
-  <title>life | 寻玉</title>
+  <title>我对学习的一点感悟 | 寻玉</title>
 
   
 
@@ -102,16 +102,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">life</h1>
+          <h1 class="title-wrap">我对学习的一点感悟</h1>
           <h2 class="title-sub-wrap">
             <strong>寻玉</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-23T13:32:35.000Z" itemprop="datePublished">2021-11-23</time>
+            <time  class="article-date" datetime="2021-11-26T10:57:38.099Z" itemprop="datePublished">2021-11-26</time>
           </h2>
           <ul class="wrap-list dark">
   
+    <li><a href="/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/">📒 心得体会</a></li>
+  
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E6%97%A5%E5%B8%B8%E6%84%9F%E5%8F%97/">🏷️ 日常感受</a></li>
   
 </ul>
         </div>
@@ -135,15 +139,13 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="hope-everyone-can-have-a-happy-life"><a href="#hope-everyone-can-have-a-happy-life" class="headerlink" title="hope everyone can have a happy life"></a>hope everyone can have a happy life</h2><div class="aplayer-box" data-url='https://m701.music.126.net/20211124184826/63986787b57c8627bc77ba18f2cfa5e1/jdyyaac/5559/5508/560e/b3f3b836e2bb89dd3c2dadbc848870c4.m4a' data-name='tsuki-' data-artist='yuiko' data-​ data-cover='https://api2.mubu.com/v3/document_image/8bbdd82c-9ef2-4b08-85ab-0f01f22f68b0-11240310.jpg' data-​ data-lrcType='3' ></div>
-
-<p>​    lrc=”<a target="_blank" rel="noopener" href="https://qiniu.sukoshi.xyz/public/music/%E9%B9%BF%E4%B9%83">https://qiniu.sukoshi.xyz/public/music/鹿乃</a> - アイロニ.lrc”</p>
-
+        <h1 id="别学了，学啥都不如直接退学"><a href="#别学了，学啥都不如直接退学" class="headerlink" title="别学了，学啥都不如直接退学"></a>别学了，学啥都不如直接退学</h1>
       </section>
 
       
       
         <nav class="article-nav">
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
@@ -156,11 +158,10 @@
           <h2 class="card-text--title text-ellipsis">数据结构</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
@@ -348,70 +349,7 @@
   <!-- aplayer -->
 
 
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: true,
-          loop: true,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
-
-
 <!-- dplayer -->
-
-
-<!-- dplayer 视频 start -->
-<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
-<script type="text/javascript">
-  const dplayer = document.querySelectorAll(".dplayer-box");
-  dplayer && initDPlayer(dplayer);
-  function initDPlayer(els) {
-    let elsArr = Array.from(els);
-    elsArr.forEach(el => {
-      let url = el.dataset.url;
-      let pic = el.dataset.pic;
-      let subtitle = el.dataset.subtitle;
-
-      let options = {
-        container: el,
-        video: { url: url, pic: pic },
-        theme: "#b7daff",
-        autoplay: false,
-        loop: false,
-        mutex: true,
-      }
-
-      if (subtitle) {
-        options.subtitle = {
-          url: el.dataset.subtitle,
-        }
-      }
-      new DPlayer(options);
-    });
-  }
-</script>
-<!-- dplayer 视频 end -->
-
 
 
 
