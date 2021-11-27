@@ -491,7 +491,124 @@ c3.3,-7.3,9.3,-11,18,-11H400000v40H1017.7s-90.5,478,-276.2,1466c-185.7,988,
 77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,606z
 M1001 80H400000v40H1017z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7839449999999999em;"><span></span></span></span></span></span></span></span></span></span></p>
 <h1 id="第五章-数组和广义表"><a class="markdownIt-Anchor" href="#第五章-数组和广义表"></a> 第五章 数组和广义表</h1>
-<h2 id="5"><a class="markdownIt-Anchor" href="#5"></a> 5.</h2>
+<h2 id="51-数组和线性表的关系以及数组的运算"><a class="markdownIt-Anchor" href="#51-数组和线性表的关系以及数组的运算"></a> 5.1 数组和线性表的关系以及数组的运算</h2>
+<ul>
+<li>
+<p>数组与线性表之间的关系：线性表的扩展，其数据元素本身也是线性表</p>
+</li>
+<li>
+<p>数组的特点：</p>
+<ol>
+<li>数组中各元素都具有统一的类型</li>
+<li>可以认为，d维数组的非边界元素具有d个直接前趋和d个直接后继</li>
+<li>数组维数确定后，数据元素个数和元素之间的关系不再发生改变，适合于顺序存储</li>
+<li>每组有定义的下标都存在一个与其相对应的值</li>
+</ol>
+</li>
+<li>
+<p>在数组上的基本操作：</p>
+<ol>
+<li>给定一组下标，取得相应的数据元素值</li>
+<li>给定一组下标，修改相应的数据元素值</li>
+</ol>
+</li>
+</ul>
+<h2 id="52-数组的顺序存储结构"><a class="markdownIt-Anchor" href="#52-数组的顺序存储结构"></a> 5.2 数组的顺序存储结构</h2>
+<ul>
+<li>
+<p>“行序为主序” 即 “低下标优先”，“列序为主序” 即 “高下标优先”</p>
+</li>
+<li>
+<p>注：Pascal、C语言以行序为主序，Fortran 语言以列序为主序</p>
+</li>
+</ul>
+<p><strong>数组是一种随机存取结构:对任一元素定位时间相等</strong></p>
+<h2 id="53-矩阵的压缩存储提醒我有空去加图"><a class="markdownIt-Anchor" href="#53-矩阵的压缩存储提醒我有空去加图"></a> 5.3 矩阵的压缩存储//提醒我有空去加图</h2>
+<h3 id="531对称矩阵"><a class="markdownIt-Anchor" href="#531对称矩阵"></a> 5.3.1对称矩阵</h3>
+<ul>
+<li>存储方法:只存储下(或者上)三角(包括主对角线)的数据元素。共占用n(n+1)/2个元素空间: sa[0.. n(n+1)/2-1] 。</li>
+</ul>
+<h3 id="532-三角矩阵"><a class="markdownIt-Anchor" href="#532-三角矩阵"></a> 5.3.2 三角矩阵</h3>
+<ul>
+<li>存储方法:重复元素c共享一个元素存储空间，共占用n(n+1)/2+1个元素空间: sa[0.. n(n+1)/2]。sa[0]=C</li>
+</ul>
+<h3 id="533-带状矩阵对角矩阵"><a class="markdownIt-Anchor" href="#533-带状矩阵对角矩阵"></a> 5.3.3 带状矩阵（对角矩阵）</h3>
+<ul>
+<li>
+<p>特点：在nn的方阵中，非零元素集中在主对角线及其两侧共L(奇数)条对角线的带状区域内 — L对角矩阵。</p>
+</li>
+<li>
+<p>存储方法：</p>
+<ol>
+<li>以对角线的顺序存储,共n*L个元素。</li>
+<li>只存储带状区内的元素。除首行和末行，按每行 L个元素，共 (n-2)L+(L+1)=(n-1)L+1 个元素。sa[0..(n-1)L]</li>
+</ol>
+</li>
+</ul>
+<h3 id="534-随机稀疏矩阵"><a class="markdownIt-Anchor" href="#534-随机稀疏矩阵"></a> 5.3.4 随机稀疏矩阵</h3>
+<ul>
+<li>
+<p>大多数元素为零。</p>
+</li>
+<li>
+<p>常用存储方法：记录每一非零元素(i,j,aij )—节省空间，但丧失随机存取功能</p>
+<ol>
+<li>顺序存储：三元组表</li>
+<li>链式存储：十字(正交)链表</li>
+</ol>
+</li>
+</ul>
+<h4 id="5341-三元组表"><a class="markdownIt-Anchor" href="#5341-三元组表"></a> 5.3.4.1 三元组表</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 1000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	ElemType e;</span><br><span class="line">&#125;Triple;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	Triple data[MAXSIZE+<span class="number">1</span>];<span class="comment">//三元组表，data[0]未用</span></span><br><span class="line">	<span class="keyword">int</span> mu, nu, tu;<span class="comment">//行数、列数、非零元个数</span></span><br><span class="line">&#125;TSMatrix;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>求逆置矩阵</p>
+<ol>
+<li>
+<p>普通算法</p>
+</li>
+<li>
+<p>快速转置</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="5342-行逻辑链接的表"><a class="markdownIt-Anchor" href="#5342-行逻辑链接的表"></a> 5.3.4.2 行逻辑链接的表</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">     Triple data[MAXSIZE+<span class="number">1</span>];</span><br><span class="line">     <span class="keyword">int</span> rpos[MAXRC+<span class="number">1</span>];</span><br><span class="line">     <span class="keyword">int</span> mu, nu, tu;</span><br><span class="line">&#125;RLSMatrix;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="5343-十字链表"><a class="markdownIt-Anchor" href="#5343-十字链表"></a> 5.3.4.3 十字链表</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">OLNode</span></span></span><br><span class="line"><span class="class">&#123;</span>  <span class="keyword">int</span> i, j ;</span><br><span class="line">    ElemType e;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">OLNode</span> *<span class="title">right</span>, *<span class="title">down</span>;</span></span><br><span class="line">&#125;OLNode, *OLink;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>  &#123;</span></span><br><span class="line">    OLink * rhead, * chead;</span><br><span class="line">    <span class="keyword">int</span> mu, nu, tu;</span><br><span class="line">&#125;CrossList;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="54-广义表的定义和表示方法"><a class="markdownIt-Anchor" href="#54-广义表的定义和表示方法"></a> 5.4 广义表的定义和表示方法</h2>
+<ul>
+<li>
+<p>概念:广义表是由零个或多个原子或者子表组成的有限序列。可以记作：LS=(d1, d2, … , dn )</p>
+<ol>
+<li>原子：逻辑上不能再分解的元素。</li>
+<li>子表：作为广义表中元素的广义表。</li>
+</ol>
+</li>
+<li>
+<p>广义表中的元素全部为原子时即为线性表。线性表是广义表的特例，广义表是线性表的推广。</p>
+</li>
+<li>
+<p>广义表的相关术语</p>
+<ol>
+<li>表的长度：表中的元素（第一层）个数。</li>
+<li>表的深度：表中元素的最深嵌套层数。</li>
+<li>表头：表中的第一个元素。</li>
+<li>表尾：除第一个元素外，剩余元素构成的广义表。</li>
+</ol>
+</li>
+</ul>
+<p><strong>非空广义表的表尾必定仍为广义表</strong></p>
+<h2 id="55-广义表的存储结构"><a class="markdownIt-Anchor" href="#55-广义表的存储结构"></a> 5.5 广义表的存储结构</h2>
+<h3 id="551-头尾链表形式"><a class="markdownIt-Anchor" href="#551-头尾链表形式"></a> 5.5.1 头尾链表形式</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span>ATOM, LIST&#125; ElemTag;</span><br><span class="line"><span class="comment">// ATOM==0:原子；LIST==1：子表</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span>&#123;</span></span><br><span class="line">	ElemTag tag;</span><br><span class="line">	<span class="class"><span class="keyword">union</span>&#123;</span></span><br><span class="line">	     AtomType atom;</span><br><span class="line">	     <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	          <span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span> *<span class="title">hp</span>, *<span class="title">tp</span>;</span></span><br><span class="line">	     &#125;ptr;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; *GList1;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="552-扩展的线性链表形式"><a class="markdownIt-Anchor" href="#552-扩展的线性链表形式"></a> 5.5.2 扩展的线性链表形式</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span>ATOM, LIST&#125; ElemTag;</span><br><span class="line"><span class="comment">// ATOM==0:原子；LIST==1：子表</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span>&#123;</span></span><br><span class="line">	ElemTag tag;</span><br><span class="line">	<span class="class"><span class="keyword">union</span>&#123;</span></span><br><span class="line">	     AtomType atom;</span><br><span class="line">	     <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	          <span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span>  *<span class="title">hp</span>;</span></span><br><span class="line">	     &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span> *<span class="title">tp</span>;</span></span><br><span class="line">&#125; *GList2;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="56-广义表的递归算法"><a class="markdownIt-Anchor" href="#56-广义表的递归算法"></a> 5.6 广义表的递归算法</h2>
+<ul>
+<li>广义表的定义是递归的。</li>
+</ul>
 <h1 id="第六章-树和二叉树"><a class="markdownIt-Anchor" href="#第六章-树和二叉树"></a> 第六章 树和二叉树</h1>
 <h2 id="61-树的结构定义和基本操作"><a class="markdownIt-Anchor" href="#61-树的结构定义和基本操作"></a> 6.1 树的结构定义和基本操作</h2>
 <ul>
