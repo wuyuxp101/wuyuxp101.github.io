@@ -106,7 +106,7 @@
           <h2 class="title-sub-wrap">
             <strong>寻玉</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-24T00:01:09.309Z" itemprop="datePublished">2021-11-24</time>
+            <time  class="article-date" datetime="2021-11-27T15:49:59.000Z" itemprop="datePublished">2021-11-27</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -148,20 +148,31 @@
         <div class="aplayer-box" data-url='https://bdcm02.baidupcs.com/file/e398ccba3q5875d985ab35a3b5866053?bkt' data-name='tsuki-' data-artist='yuiko' data-​ data-cover='https://api2.mubu.com/v3/document_image/8bbdd82c-9ef2-4b08-85ab-0f01f22f68b0-11240310.jpg' data-​ data-lrcType='3' ></div>
 <p>​    lrc=&quot;<a target="_blank" rel="noopener" href="https://qiniu.sukoshi.xyz/public/music/%E9%B9%BF%E4%B9%83">https://qiniu.sukoshi.xyz/public/music/鹿乃</a> - アイロニ.lrc&quot;</p>
 <hr />
-<p><sub>面向自己做笔记，我不生产笔记，我只是ppt的搬运工</sub></p>
+<p><s>面向自己做笔记，我不生产笔记，我只是ppt的搬运工</s></p>
 <p>藏藏<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <h1 id="第一章-绪论"><a class="markdownIt-Anchor" href="#第一章-绪论"></a> 第一章 绪论</h1>
+<h2 id="11-什么是数据结构"><a class="markdownIt-Anchor" href="#11-什么是数据结构"></a> 1.1 什么是数据结构</h2>
+<ul>
+<li>数据的结构，直接影响算法的选择和效率。程序设计的实质是对实际问题选择一个好的数据结构，加之设计一个好的算法。而好的算法在很大程度上取决于描述实际问题的数据结构。<sub>好像说了什么又好像没说什么</sub></li>
+</ul>
 <h2 id="12-基本概念和术语"><a class="markdownIt-Anchor" href="#12-基本概念和术语"></a> 1.2 基本概念和术语</h2>
-<p><sub>就算列出来我也不会背的</sub></p>
+<p><s>就算列出来我也不会背的</s></p>
 <ul>
 <li>
 <p>数据： 被计算机加工处理的对象。</p>
 </li>
 <li>
-<p>数据元素（记录、表目）：数据的基本单位，是数据集合中的一个个体。一个数据元素可由若干个数据线组成。</p>
+<p>数据项：不可分割的数据的<strong>最小单位</strong>，数据项是构成数据元素的最小单位。</p>
 </li>
 <li>
-<p>数据类型：在一种程序设计语言中，变量所具有的数据种类。</p>
+<p>数据元素（记录、表目）：数据的<strong>基本单位</strong>（并非最小单位），是数据集合中的一个个体。一个数据元素可由若干个数据项组成。</p>
+</li>
+<li>
+<p>数据类型：在一种程序设计语言中，变量所具有的数据种类。分以下两种类型：</p>
+<ol>
+<li>原子类型：不可分解，如int、char。</li>
+<li>结构类型：可分解的。</li>
+</ol>
 </li>
 <li>
 <p>数据对象：是性质相同的数据元素的集合，是数据的一个子集。（某种数据类型元素的集合。）<em>数据对象可以是有限的，也可以是无限的。</em></p>
@@ -169,6 +180,17 @@
 <li>
 <p>数据结构：具有结构的数据元素的集合。它包括数据元素的<strong>逻辑结构</strong>、<strong>存储结构</strong>和相适应的<strong>运算</strong>。</p>
 </li>
+<li>
+<p>逻辑结构：数据元素之间的逻辑关系。</p>
+</li>
+</ul>
+
+    <figure class="figure-image">
+      <img src="https://api2.mubu.com/v3/document_image/b218f55b-3ea1-4059-a991-4d6cceef6ae6-11240310.jpg" alt="用二元组表示逻辑结构" loading="lazy" />
+      <figcaption>用二元组表示逻辑结构</figcaption>
+    </figure>
+  
+<ul>
 <li>
 <p>四种基本的<strong>逻辑结构</strong></p>
 <ol>
@@ -182,16 +204,18 @@
 <p>存储结构（物理结构）：指数据的逻辑结构在计算机存储器中的映象表示。</p>
 </li>
 <li>
-<p>数据元素的映象：用二进制位(bit)的位串表示数据元素。每个数据元素的映象称为<strong>结点</strong>， 每个数据项的映象称为<strong>数据域</strong>。</p>
-</li>
+<p>数据元素的映象：用二进制位(bit)的位串表示数据元素。每个数据元素的映象称为<strong>结点</strong>(又称元素，是一个二进制位串)， 每个数据项的映象称为<strong>数据域</strong>。</p>
+<ul>
 <li>
 <p>关系的映象：两种基本方法及其组合使用。</p>
-<ul>
+<ol>
 <li>
 <p><strong>顺序映象</strong>：以相对的存储位置表示关系。</p>
 </li>
 <li>
 <p><strong>链式映象</strong>：以附加信息(指针)表示关系。</p>
+</li>
+</ol>
 </li>
 </ul>
 </li>
@@ -217,7 +241,12 @@
       <figcaption>ADT类型</figcaption>
     </figure>
   
+<h2 id="13-抽象数据类型的表现与实现如何说抽象话"><a class="markdownIt-Anchor" href="#13-抽象数据类型的表现与实现如何说抽象话"></a> 1.3 抽象数据类型的表现与实现(<s>如何说抽象话</s>)</h2>
+<p><em>会就不用看了，不好看，至少不如我好看</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> STATUS</span><br></pre></td></tr></table></figure>
+<p><strong>小细节：约定当a&amp;&amp;b时如果a==0则不对b进行求值，同理若a||b时如a==1则不对b求值。</strong></p>
 <h2 id="14-算法和算法分析"><a class="markdownIt-Anchor" href="#14-算法和算法分析"></a> 1.4 算法和算法分析</h2>
+<h3 id="141-算法"><a class="markdownIt-Anchor" href="#141-算法"></a> 1.4.1 算法</h3>
 <ul>
 <li>算法：是对特定问题求解步骤的一种描述算法是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有以下特性
 <ol>
@@ -242,28 +271,146 @@
 </ul>
 <h3 id="143-算法度量"><a class="markdownIt-Anchor" href="#143-算法度量"></a> 1.4.3 算法度量</h3>
 <ul>
-<li><strong>时间复杂度</strong>：若有某个辅助函数*f(n),<em>使得当n趋近于无穷大时，T(n)/f(n)的极限值为不等于零的常数，则称</em>f(n)*是T(n)的同数量级函数（记作T(n) =Ｏ(<em>f(n)</em> ) ，称O(<em>f(n)</em>) 为算法的渐近时间复杂度，简称时间复杂度。</li>
+<li>
+<p><strong>渐进时间复杂度</strong>（简称时间复杂度）：若有某个辅助函数*f(n),<em>使得当n趋近于无穷大时，T(n)/f(n)的极限值为不等于零的常数，则称</em>f(n)*是T(n)的同数量级函数（记作T(n) =Ｏ(<em>f(n)</em> ) ，称O(<em>f(n)</em>) 为算法的渐近时间复杂度，简称<strong>时间复杂度</strong>。</p>
+</li>
+<li>
+<p><strong>语句的频度</strong>：该语句重复执行的次数。</p>
+</li>
+</ul>
+<h3 id="144-算法的存储空间需求"><a class="markdownIt-Anchor" href="#144-算法的存储空间需求"></a> 1.4.4 算法的存储空间需求</h3>
+<ul>
 <li><strong>空间复杂度</strong>：算法所需存储空间的度量，记作S(n)=O(f(n))。</li>
 </ul>
+<hr />
 <h1 id="第二章-线性表"><a class="markdownIt-Anchor" href="#第二章-线性表"></a> 第二章 线性表</h1>
+<h2 id="21-线性表的类型定义"><a class="markdownIt-Anchor" href="#21-线性表的类型定义"></a> 2.1 线性表的类型定义</h2>
 <ul>
+<li>线性结构：一个数据元素的有序（次序）集合。</li>
+</ul>
+<h2 id="线性表的顺序表示和实现"><a class="markdownIt-Anchor" href="#线性表的顺序表示和实现"></a> 线性表的顺序表示和实现</h2>
+<ul>
+<li>
+<p>顺序表： “用一组地址连续的存储单元依次存放线性表中的数据元素”，即以“存储位置相邻”表示“位序相继的两个数据元素之间的前驱和后继的关系，并以表中第一个元素的存储位置作为线性表的起始地址，称作线性表的基地址。</p>
+</li>
 <li>
 <p>线性表的顺序存储</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXLISTSIZE = <span class="number">80</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SqList;</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>线性表的链式存储</p>
+</ul>
+<p>这种顺序存储表示仅适用于不常进行插入和删除操作、表中元素相对稳定的线性表。</p>
+<ul>
+<li>线性表存储的特点
+<ul>
+<li>逻辑上相邻的元素，其物理位置也相邻；</li>
+<li>可随机存取表中任一元素；</li>
+<li>必须按最大可能长度预分存储空间，存储空间利用率低，表的容量难以扩充，是一种静态存储结构；</li>
+<li>插入删除时，需移动大量元素，平均移动元素为n/2。</li>
+</ul>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LNode, *Linklist;</span><br></pre></td></tr></table></figure>
+<h2 id="23-线性表的链式表示和实现"><a class="markdownIt-Anchor" href="#23-线性表的链式表示和实现"></a> 2.3 线性表的链式表示和实现</h2>
 <ul>
 <li>
-<p>双向链表</p>
+<p>线性表的链式存储</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">  ElemType data;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;LNode, *Linklist;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>线性表的链式存储表示的特点是用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的）。</p>
+<ul>
+<li>数据元素ai除了存储其本身的信息之外（数据域），还需存储一个指示其直接后继的信息（即直接后继的存储位置（指针域））。这两部分共同构成数据元素的存储映像，成为结点。</li>
+</ul>
+
+    <figure class="figure-image">
+      <img src="https://api2.mubu.com/v3/document_image/ba0f4d58-f0cd-4a88-a0da-83f6c55f5bed-11240310.jpg" alt="逆序创建单链表" loading="lazy" />
+      <figcaption>逆序创建单链表</figcaption>
+    </figure>
+  
+<ul>
+<li>
+<p>单链表的优势</p>
+<ol>
+<li>能有效利用存储空间；逻辑上相邻的元素，物理位置不一定需要相邻； 元素之间的邻接关系由指针域指示。链表是一种动态存储结构；</li>
+<li>用“指针”指示数据元素之间的后继关系，便于进行“插入”、“删除”等操作；</li>
+</ol>
+</li>
+</ul>
+<h2 id="233双向链表"><a class="markdownIt-Anchor" href="#233双向链表"></a> 2.3.3双向链表</h2>
+<ul>
+<li>
+<p>双向链表：其结点结构中含有两个指针域，其一指向数据元素的&quot;直接后继&quot;，另一指向数据元素的“直接前驱”</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DulNode</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">DuLNode</span> *<span class="title">prior</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">DuLNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;DuLNode, *DuLink;</span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
+</ul>
+<p>查找结点也是要从头指针指示的头结点开始。，插入和删除时必须同时修改两个方向上的指针。</p>
+<h2 id="232-循环链表"><a class="markdownIt-Anchor" href="#232-循环链表"></a> 2.3.2 循环链表</h2>
+<ul>
+<li>循环链表的特点
+<ol>
+<li>从任一结点出发，沿着链可访问全部结点；</li>
+<li>运算与单链表基本一致，仅是循环结束条件为P-&gt;next==H (H为头指针)；</li>
+<li>判断是否是表尾结点：p-&gt;next==H ;</li>
+</ol>
+</li>
+</ul>
+<h2 id="24-顺序表与链表的比较"><a class="markdownIt-Anchor" href="#24-顺序表与链表的比较"></a> 2.4 顺序表与链表的比较</h2>
+<ol>
+<li>基于空间：</li>
+</ol>
+<ul>
+<li>
+<p>顺序表静态分配可能会产生空间浪费或空间不足的问题，但链表动态分配很难产生溢出的情况。</p>
+</li>
+<li>
+<p>存储密度顺序表为百分百，而链表因为有指针域，存储密度会降低。</p>
+</li>
+</ul>
+<ol start="2">
+<li>基于时间：</li>
+</ol>
+<ul>
+<li>顺序表可实现随机存储，但链表不可以。</li>
 </ul>
 <h1 id="第三章-栈和队列"><a class="markdownIt-Anchor" href="#第三章-栈和队列"></a> 第三章 栈和队列</h1>
+<h2 id="31-栈"><a class="markdownIt-Anchor" href="#31-栈"></a> 3.1 栈</h2>
+<ul>
+<li>
+<p>栈和队列是在程序设计中被广泛使用的两种线性数据结构，它们的特点在于基本操作的特殊性，栈必须按“后进先出”的规则进行操作，而队列必须按“先进先出”的规则进行操作。和线性表相比，它们的插入和删除操作受更多的约束和限定，故又称为限定性的线性表结构。可将线性表和栈及队列的插入和删除操作对比如下：</p>
+<ul>
+<li>栈只允许在表尾一端进行插入和删除；</li>
+<li>队列只允许在表尾一端进行插入，在表头一端进行删除。</li>
+<li>线性表允许在表内任一位置进行插入和删除</li>
+<li>和线性表相比，从&quot;数据结构&quot;的角度看，它们都是线性结构，即数据元素之间的关系相同。但它们是完全不同的数据类型。除了它们各自的基本操作集不同外，主要区别是对插入和删除操作的&quot;限定&quot;。</li>
+</ul>
+</li>
+<li>
+<p>顺序栈：栈中的数据元素是用一组连续的存储空间来存放的。栈底位置可以设置在存储空间的一个端点，而栈顶是随着插入和删除而变化的，用一个top指针来指示当前栈顶位置</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CONST arrmax=<span class="number">100</span></span><br><span class="line"><span class="keyword">typedef</span> struct&#123;</span><br><span class="line">    Elemtype *yop,*base;</span><br><span class="line">    <span class="keyword">int</span> stacksize;</span><br><span class="line">&#125;SqStack;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>链栈</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span> <span class="title">node</span>  &#123;</span> </span><br><span class="line">    Elemtype     data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>  *<span class="title">next</span>;</span></span><br><span class="line">&#125;  LinkStack;</span><br></pre></td></tr></table></figure>
+<p>由于栈只在栈顶作插入和删除操作，因此链栈中不需要头结点，但要注意链栈中指针的方向是从栈顶指向栈底的，这正好和单链表是相反的。</p>
+<p><em>二元表达式的前中后缀表示法这里不写了，跟树的序表示基本一致</em></p>
+<h2 id="32-队列"><a class="markdownIt-Anchor" href="#32-队列"></a> 3.2 队列</h2>
+<ul>
+<li>
+<p>队列是一种特殊的线性表，限定插入和删除操作分别在表的两端进行。具有先进先出(FIFO—First In First Out)的特点。把允许插入的一端叫队尾(rear) ，把允许删除的一端叫队头(front)。没有元素时称为空队列。</p>
+</li>
+<li>
+<p>队列的链式存储结构</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span> <span class="title">node</span>  &#123;</span> </span><br><span class="line">    Elemtype     data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>  *<span class="title">next</span>;</span></span><br><span class="line">&#125;  QNode ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span>  &#123;</span></span><br><span class="line">    QNode    * front;</span><br><span class="line">    QNode    * rear;</span><br><span class="line">&#125;  LinkQueue ;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>队列的顺序存储</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span>   <span class="class"><span class="keyword">struct</span>  &#123;</span></span><br><span class="line">    Elemtype   * base;</span><br><span class="line">    <span class="keyword">int</span>   front;</span><br><span class="line">    <span class="keyword">int</span>   rear;</span><br><span class="line">&#125;  SqQueue;</span><br></pre></td></tr></table></figure>
+<p>队列存在假上溢现象，可以用循环队列解决。</p>
+<h1 id="第四章-串"><a class="markdownIt-Anchor" href="#第四章-串"></a> 第四章 串</h1>
+<p><em>我的评价是，屁都不会</em></p>
 <h1 id="第五章-数组和广义表"><a class="markdownIt-Anchor" href="#第五章-数组和广义表"></a> 第五章 数组和广义表</h1>
 <h1 id="第六章-树和二叉树"><a class="markdownIt-Anchor" href="#第六章-树和二叉树"></a> 第六章 树和二叉树</h1>
 <h2 id="61-树的结构定义和基本操作"><a class="markdownIt-Anchor" href="#61-树的结构定义和基本操作"></a> 6.1 树的结构定义和基本操作</h2>
@@ -363,12 +510,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://api2.mubu.com/v3/document_image/43b828d8-e881-4583-9f98-6fe7244b4379-11240310.jpg"></div>
+      <div class="card-cover" background-image-lazy data-img="https://api2.mubu.com/v3/document_image/93b47edf-594a-4ae7-a4c2-281821034fac-11240310.jpg"></div>
     
     <div class="card-text">
       
-        <a href="/2021/11/26/%E5%AF%B9%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%82%9F/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">我对学习的一点感悟</h2>
+        <a href="/2022/11/22/%E5%8D%9A%E5%AE%A2%E5%A3%B0%E6%98%8E/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">博客声明</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -376,6 +523,22 @@
   </article>
 </div>
           
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://api2.mubu.com/v3/document_image/f5c75a48-754a-4097-b880-50552247dab2-11240310.jpg"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/11/27/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">博客的搭建教程</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
           
         </nav>
       
