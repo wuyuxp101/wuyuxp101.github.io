@@ -166,6 +166,70 @@
 <p>区分不同数据对象的唯一方法是我们读到这些数据对象时的上下文。</p>
 </li>
 </ul>
+<h2 id="12-程序被其他程序翻译成不同的格式"><a class="markdownIt-Anchor" href="#12-程序被其他程序翻译成不同的格式"></a> 1.2 程序被其他程序翻译成不同的格式</h2>
+<ul>
+<li>将一个源文件编译成一个可执行目标文件由<strong>编译器驱动程序完成</strong>。</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linux&gt; gcc <span class="literal">-o</span> hello hello.c</span><br></pre></td></tr></table></figure>
+<ul>
+<li>gcc的翻译过程分为四个阶段，<strong>预处理器（cpp）、编译器（ccl）、汇编器（as）、链接器（ld）<strong>是分别执行这四个阶段的程序，它们一起构成了</strong>编译系统（compilation system)</strong></li>
+</ul>
+
+    <figure class="figure-image">
+      <img src="https://api2.mubu.com/v3/document_image/686c5174-a5a3-4052-8722-50f62d935df6-11240310.jpg" alt="编译系统" loading="lazy" />
+      <figcaption>编译系统</figcaption>
+    </figure>
+  
+<p>四个阶段如下：</p>
+<ol>
+<li>
+<p>预处理阶段：预处理器将c源程序中的预编译指令直接插入到程序文本中，得到以.i为文件拓展名的另一个c程序。</p>
+</li>
+<li>
+<p>编译阶段：编译器将.i文本文件转换为一个<strong>汇编语言程序</strong>的.s文件。（注：汇编语言为不同高级语言提供了一个通用的输出语言，每条语句都描述了一条低级机器语言指令。）</p>
+</li>
+<li>
+<p>汇编阶段： 汇编器将.s翻译成机器语言指令，将指令打包成一种叫做<strong>可重定位目标程序</strong>，并将结果保存在.o文件中，.o文件是一个二进制文件。</p>
+</li>
+<li>
+<p>链接阶段：将多个.o文件合并为一个<strong>可执行目标文件</strong>，可以被加载到内存中，由系统执行。</p>
+</li>
+</ol>
+<h2 id="13了解编译系统如何工作十大有作用的"><a class="markdownIt-Anchor" href="#13了解编译系统如何工作十大有作用的"></a> 1.3了解编译系统如何工作十大有作用的</h2>
+<ol>
+<li>我们可以优化程序性能。</li>
+<li>理解链接时出现的错误。</li>
+<li>避免安全漏洞。</li>
+</ol>
+<h2 id="14-处理器读并解释存储在内存中的指令"><a class="markdownIt-Anchor" href="#14-处理器读并解释存储在内存中的指令"></a> 1.4 处理器读并解释存储在内存中的指令</h2>
+<ul>
+<li>
+<p>shell是一个命令行解释器，它输出一个提示符，等待输入的命令行，执行命令。</p>
+</li>
+<li>
+<p>shell执行可执行程序</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">linux&gt;</span><span class="bash"> ./hello</span></span><br><span class="line">hello, world!</span><br></pre></td></tr></table></figure>
+<h3 id="141-系统的硬件组成"><a class="markdownIt-Anchor" href="#141-系统的硬件组成"></a> 1.4.1 系统的硬件组成</h3>
+<p><em>但硬件这点破玩意看着好困好想睡</em></p>
+<ol>
+<li><strong>总线</strong></li>
+</ol>
+<p>总线是贯穿整个系统的一组电子管道，它在各个部件间传递信息字节，通常传送定长的字节块，即<strong>字（word）</strong>。字中的字节数（<strong>字长</strong>）是一个基本的系统参数，分4、8字节，即32位、64位。</p>
+<ol start="2">
+<li><strong>I/O设备</strong></li>
+</ol>
+<p>每个I/O设备都通过一个控制器或适配器与I/O总线相连，控制器是I/O设备本身或者系统的主印制电路板（主板）上的芯片组，而适配器则是一块插在主板插槽上的卡，他们的功能都是在设备之间传递信息。第6章详解。<sub>不知道本博还有没有第六章的笔记</sub></p>
+
+    <figure class="figure-image">
+      <img src="https://api2.mubu.com/v3/document_image/8b52b381-6f89-4341-a3a0-6d73c8f68579-11240310.jpg" alt="" loading="lazy" />
+      <figcaption></figcaption>
+    </figure>
+  
+<hr />
+<p>未完待续</p>
+<p>最近更新日期：2021-11-29</p>
 
       </section>
 
@@ -287,7 +351,8 @@
     <span>NOTICE</span>
   </div>
   <div class="widget-body">
-    <p>我不仅什么都学不会，还好累好饿好想睡觉</p>
+    <p>我不仅什么都学不会，还好累好饿好想睡觉
+目前网站默认主题为深色（个人兴趣），可能会导致加粗字体显示不明显，建议阅读笔记时调成浅色。</p>
   </div>
 </section>
 
