@@ -772,8 +772,42 @@ M1001 80H400000v40H1017z'/></svg></span></span></span><span class="vlist-s">​<
 <ul>
 <li>表达式的先序中序后序序列，与树的遍历异曲同工。</li>
 </ul>
+<h1 id="第9章-查找"><a class="markdownIt-Anchor" href="#第9章-查找"></a> 第9章 查找</h1>
+<p><em>本章约定，关键字类型为整形</em></p>
+<h2 id="91-概念和术语"><a class="markdownIt-Anchor" href="#91-概念和术语"></a> 9.1 概念和术语</h2>
+<ul>
+<li>查找表：同一类型的记录(数据元素)的集合。<strong>数据元素之间存在着松散的关系</strong>。为了提高查找的效率，可在元素之间人为地附加某种确定的关系。</li>
+<li>关键字：记录(数据元素)中的某个数据项的值。
+<ul>
+<li>主关键字：该关键字可以唯一地标识一个记录。</li>
+<li>次关键字：该关键字不能唯一标识一个记录。</li>
+</ul>
+</li>
+<li>查找：指定某个值，在查找表中确定是否存在一个记录，该记录的<strong>关键字</strong>等于给定值。</li>
+<li>静态查找表：对查找表的查找仅是以查询为目的，不改动查找表中的数据。</li>
+<li>动态查找表：在查找的过程中同时插入不存在的记录，或删除某个已存在的记录。</li>
+<li>查找成功：查找表中存在满足查找条件的记录。</li>
+<li>查找不成功：查找表中不存在满足查找条件的记录。</li>
+<li>内查找：整个查找过程都在内存中进行。</li>
+<li>外查找：在查找过程中需要访问外存。</li>
+<li><strong>平均查找长度<em>ASL</em></strong>：查找方法时效的度量，为确定记录在查找表中的位置，需将关键字和给定值比较次数的期望值。</li>
+</ul>
+
+    <figure class="figure-image">
+      <img src="https://api2.mubu.com/v3/document_image/38701eab-5de3-45c5-90fb-0c7e54d7ef98-11240310.jpg" alt="查找成功的计算方法" loading="lazy" />
+      <figcaption>查找成功的计算方法</figcaption>
+    </figure>
+  
+<h2 id="92-静态查找表"><a class="markdownIt-Anchor" href="#92-静态查找表"></a> 9.2 静态查找表</h2>
+<ul>
+<li>关键词：数据元素某个数据项的值，用来唯一标识该元素</li>
+</ul>
+<h3 id="921-顺序表的查找"><a class="markdownIt-Anchor" href="#921-顺序表的查找"></a> 9.2.1 顺序表的查找</h3>
+<h3 id="922-有序表的查找"><a class="markdownIt-Anchor" href="#922-有序表的查找"></a> 9.2.2 有序表的查找</h3>
+<h3 id="923-静态树表的查找"><a class="markdownIt-Anchor" href="#923-静态树表的查找"></a> 9.2.3 静态树表的查找</h3>
+<h3 id=""><a class="markdownIt-Anchor" href="#"></a> </h3>
 <hr />
-<p>未完待续</p>
+<p>未完待续 更新日期：20-12-01</p>
 <hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
