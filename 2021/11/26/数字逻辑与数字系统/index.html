@@ -284,7 +284,94 @@
 <h2 id="21-组合逻辑分析"><a class="markdownIt-Anchor" href="#21-组合逻辑分析"></a> 2.1 组合逻辑分析</h2>
 <p>任意时刻的输出状态取决于该时刻信号的输入状态，而与信号作用前电路的状态无关。</p>
 <p>组合逻辑电路分析的一般过程：阅读组合逻辑电路图-&gt;列写布尔表达式、真值表、画出数字波形图-&gt;指出电路的逻辑功能。</p>
-<h3 id="211-逐级电平推导法"><a class="markdownIt-Anchor" href="#211-逐级电平推导法"></a> 2.1.1 逐级电平推导法</h3>
+<h2 id="22-组合逻辑设计"><a class="markdownIt-Anchor" href="#22-组合逻辑设计"></a> 2.2 组合逻辑设计</h2>
+<h3 id="221-组合逻辑设计步骤"><a class="markdownIt-Anchor" href="#221-组合逻辑设计步骤"></a> 2.2.1 组合逻辑设计步骤</h3>
+<ol>
+<li>将设计问题转化为逻辑问题或算法问题</li>
+<li>将逻辑函数简化为最简<strong>与-或</strong>表达式</li>
+<li>按形式画出逻辑图</li>
+</ol>
+<h2 id="23-组合逻辑电路的等价变换"><a class="markdownIt-Anchor" href="#23-组合逻辑电路的等价变换"></a> 2.3 组合逻辑电路的等价变换</h2>
+<h3 id="231-德摩根定律的应用"><a class="markdownIt-Anchor" href="#231-德摩根定律的应用"></a> 2.3.1 德摩根定律的应用</h3>
+<p>或非门等价于非与门</p>
+<h2 id="24-数据选择器与分配器"><a class="markdownIt-Anchor" href="#24-数据选择器与分配器"></a> 2.4 数据选择器与分配器</h2>
+<h3 id="241-数据选择器"><a class="markdownIt-Anchor" href="#241-数据选择器"></a> 2.4.1 数据选择器</h3>
+<ul>
+<li>数据选择器：多路输入、单路输出，输出取决于控制信号</li>
+</ul>
+<p>74LS153</p>
+<p><img src="" alt="74LS153" /></p>
+<p>控制信号段S1,S0实现了对数据的选择，故常将其称为多路选择器的地址输入端</p>
+<h3 id="242-数据分配器"><a class="markdownIt-Anchor" href="#242-数据分配器"></a> 2.4.2 数据分配器</h3>
+<ul>
+<li>数据分配器：单路输入、多路输出的逻辑构件，选择输出的路径</li>
+</ul>
+<h2 id="25-译码器和编码器"><a class="markdownIt-Anchor" href="#25-译码器和编码器"></a> 2.5 译码器和编码器</h2>
+<h3 id="251-译码器"><a class="markdownIt-Anchor" href="#251-译码器"></a> 2.5.1 译码器</h3>
+<p>74LS48 七段译码显示器</p>
+<p>输入BCD码在对应的线路输出</p>
+<h3 id="252-编码器"><a class="markdownIt-Anchor" href="#252-编码器"></a> 2.5.2 编码器</h3>
+<p>判断输入信号并输出BCD码</p>
+<ol>
+<li>
+<p>普通编码器</p>
+</li>
+<li>
+<p>优先编码器</p>
+</li>
+</ol>
+<p>普通编码器对输入先是有限制的，即同一时刻所有输入线中只允许一个一条有信号，不然就会混乱，但优先编码器对所有信号有效，并按预先设置的顺序排队</p>
+<p>74LS148</p>
+<h2 id="26-数据比较器和加法器"><a class="markdownIt-Anchor" href="#26-数据比较器和加法器"></a> 2.6 数据比较器和加法器</h2>
+<h3 id="261-数据比较器"><a class="markdownIt-Anchor" href="#261-数据比较器"></a> 2.6.1 数据比较器</h3>
+<p>74HC85
+先高位后低位</p>
+<h3 id="262-加法器"><a class="markdownIt-Anchor" href="#262-加法器"></a> 2.6.2 加法器</h3>
+<ol>
+<li>
+<p>串行加法器</p>
+</li>
+<li>
+<p>并行加法器</p>
+</li>
+</ol>
+<p>74LS283</p>
+<h2 id="27-奇偶校验器"><a class="markdownIt-Anchor" href="#27-奇偶校验器"></a> 2.7 奇偶校验器</h2>
+<h3 id="271-奇偶校验的原理"><a class="markdownIt-Anchor" href="#271-奇偶校验的原理"></a> 2.7.1 奇偶校验的原理</h3>
+<p>在码中附加一个校验位使得1的个数总是奇数或偶数</p>
+<h1 id="第3章-时序逻辑"><a class="markdownIt-Anchor" href="#第3章-时序逻辑"></a> 第3章 时序逻辑</h1>
+<p>输出往往反馈到输入端，和输入变量一起决定电路的输出状态，且任意时刻的输出不仅取决于该时刻输入变量的状态，而且还与原来的状态有关，因此时序电路具有记忆功能</p>
+<h2 id="31-锁存器"><a class="markdownIt-Anchor" href="#31-锁存器"></a> 3.1 锁存器</h2>
+<h3 id="311-锁存器的基本特征"><a class="markdownIt-Anchor" href="#311-锁存器的基本特征"></a> 3.1.1 锁存器的基本特征</h3>
+<ul>
+<li>
+<p>特性：</p>
+<ol>
+<li>有两个互补的输出端</li>
+<li>有两个稳定状态</li>
+<li>在输入信号作用下，锁存器可以从一个稳定状态转换到零一个稳定状态</li>
+</ol>
+</li>
+<li>
+<p><strong>次态方程（特征方程）</strong>：</p>
+</li>
+</ul>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>Q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msup><mi>Q</mi><mi>n</mi></msup><mo separator="true">,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">    Q^{n+1}=f(Q^n,X) 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.058548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span></span></p>
+<p>其中X是输入信号的合集</p>
+<h3 id="312-基本sr锁存器"><a class="markdownIt-Anchor" href="#312-基本sr锁存器"></a> 3.1.2 基本SR锁存器</h3>
+<p><img src="" alt="状态转换图" /></p>
+<p>SR锁存器状态方程</p>
+<h3 id="313-门控sr锁存器"><a class="markdownIt-Anchor" href="#313-门控sr锁存器"></a> 3.1.3 门控SR锁存器</h3>
+<h3 id="314-门控d锁存器"><a class="markdownIt-Anchor" href="#314-门控d锁存器"></a> 3.1.4 门控D锁存器</h3>
+<h2 id="32-触发器"><a class="markdownIt-Anchor" href="#32-触发器"></a> 3.2 触发器</h2>
+<p>为提高锁存器工作的可靠性，推出了沿边沿触发的触发器</p>
+<p>时钟端C外面不带小圆圈，表示时钟信号为正脉冲，带小圆圈则为负脉冲</p>
+<h3 id="321-sr触发器"><a class="markdownIt-Anchor" href="#321-sr触发器"></a> 3.2.1 SR触发器</h3>
+<h3 id="322-d触发器"><a class="markdownIt-Anchor" href="#322-d触发器"></a> 3.2.2 D触发器</h3>
+<h3 id="323-jk触发器"><a class="markdownIt-Anchor" href="#323-jk触发器"></a> 3.2.3 JK触发器</h3>
+<p>J和K都为1时改为交换Q的真值，改良了SR触发器</p>
+<h3 id=""><a class="markdownIt-Anchor" href="#"></a> </h3>
 <hr />
 <p>未完待续 更新日期：2021/12/02</p>
 
