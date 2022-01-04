@@ -143,7 +143,102 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <p>这本书数学公式好多，敲到人麻，哭哭</p>
+<h1 id="第一章-概率论的基本概念"><a class="markdownIt-Anchor" href="#第一章-概率论的基本概念"></a> 第一章 概率论的基本概念</h1>
+<h2 id="10-前言"><a class="markdownIt-Anchor" href="#10-前言"></a> 1.0 前言</h2>
+<ul>
+<li><strong>确定性现象</strong>：在一定条件下必然发生的现象称为确定性现象</li>
+<li><strong>统计规律性</strong>：大量试验或者观察中所呈现出的固有规律性</li>
+<li><strong>随机现象</strong>：在大量重复实验中呈现出统计规律性的现象称为随机现象</li>
+</ul>
+<h2 id="11-随机试验"><a class="markdownIt-Anchor" href="#11-随机试验"></a> 1.1 随机试验</h2>
+<ul>
+<li>
+<p><strong>随机试验</strong>：随机试验具有以下三个特点：</p>
+<ol>
+<li>可以在相同的条件下重复的进行</li>
+<li>每次试验的可能结果不止一个，并且能事先明确试验的所有可能结果</li>
+<li>进行一次试验之前不能确定哪一个结果会出现</li>
+</ol>
+</li>
+</ul>
+<h2 id="12-样本空间-随机事件"><a class="markdownIt-Anchor" href="#12-样本空间-随机事件"></a> 1.2 样本空间、随机事件</h2>
+<h3 id="121-样本空间"><a class="markdownIt-Anchor" href="#121-样本空间"></a> 1.2.1 样本空间</h3>
+<ul>
+<li><strong>样本空间</strong>：将随机试验E的所有结果组成的集合称为E的样本空间</li>
+<li><strong>样本点</strong>：将S.样本空间的元素即E的每个结果点称为样本点</li>
+</ul>
+<h3 id="122-随机事件"><a class="markdownIt-Anchor" href="#122-随机事件"></a> 1.2.2 随机事件</h3>
+<ul>
+<li><strong>随机事件</strong>：称试验E的样本空间S的子集为E的随机事件，简称事件</li>
+<li><strong>事件发生</strong>：在每次试验中，当且仅当这一子集中的一个样本点出现时，称这一事件发生</li>
+<li><strong>基本事件</strong>：有一个样本点组成的单点集，称为基本事件</li>
+<li><strong>必然事件</strong>：样本空间S包含所有的样本点，它是S自身的子集，在每次试验中它总是发生的</li>
+<li><strong>不可能事件</strong>：空集<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">∅</span></span></span></span>不包含任何样本点，他也作为样本空间的子集，它在每次实验中都不发生，空集称为不可能事件</li>
+</ul>
+<h3 id="123-事件间的关系与事件的运算"><a class="markdownIt-Anchor" href="#123-事件间的关系与事件的运算"></a> 1.2.3 事件间的关系与事件的运算</h3>
+<ul>
+<li>
+<p>若A包含B且B包含A则称事件A和事件B相等</p>
+</li>
+<li>
+<p>若A和B中至少有一个事件发生则称A和B的和事件1发生</p>
+</li>
+<li>
+<p>若AB同时发生则称A和B的积事件发生</p>
+</li>
+<li>
+<p>当A发生B不发生时称事件A与事件B的差事件发生</p>
+</li>
+<li>
+<p>若A与B的和事件是空则称事件A与B互不相容或互斥</p>
+</li>
+<li>
+<p>A或B是全集且A交B是空集则称A与B互为逆事件，又称事件A与事件B互逆</p>
+</li>
+</ul>
+<h2 id="13-频率与概率"><a class="markdownIt-Anchor" href="#13-频率与概率"></a> 1.3 频率与概率</h2>
+<h3 id="131-频率"><a class="markdownIt-Anchor" href="#131-频率"></a> 1.3.1 频率</h3>
+<ul>
+<li>
+<p><strong>频率</strong>：在相同条件下进行了n此试验，在这n次试验中，事件A发生的次数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">n_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>称为事件A发生的频数。比值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>A</mi></msub><mi mathvariant="normal">/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">n_A/n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathdefault">n</span></span></span></span>称为事件A发生的频率，并记成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f_n(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span></p>
+</li>
+<li>
+<p><strong>概率</strong>：记作P（A）</p>
+</li>
+</ul>
+<h3 id="132-概率"><a class="markdownIt-Anchor" href="#132-概率"></a> 1.3.2 概率</h3>
+<h2 id="14-等可能概型古典概型"><a class="markdownIt-Anchor" href="#14-等可能概型古典概型"></a> 1.4 等可能概型（古典概型）</h2>
+<ul>
+<li>
+<p>特点：</p>
+<ol>
+<li>样本空间只包含有限个元素</li>
+<li>每个基本事件发生的概率均等</li>
+</ol>
+</li>
+<li>
+<p>实际推断原理：概率很小的事件在以此试验中实际上几乎是不发生的（如果概率很小的事件在一次试验中发生了则有理由怀疑假设的正确性）</p>
+</li>
+</ul>
+<h2 id="15-条件概率"><a class="markdownIt-Anchor" href="#15-条件概率"></a> 1.5 条件概率</h2>
+<h3 id="151-条件概率"><a class="markdownIt-Anchor" href="#151-条件概率"></a> 1.5.1 条件概率</h3>
+<ul>
+<li>定义： 设A，B是两个事件，且P(A)&gt;0,称</li>
+</ul>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mi mathvariant="normal">∣</mi><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mi mathvariant="normal">∣</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(B|A) = {P(A|B) \over P(A)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">∣</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mord">∣</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p>
+<p>为事件A发生的条件下事件B发生的条件概率</p>
+<h3 id="152-乘法定理"><a class="markdownIt-Anchor" href="#152-乘法定理"></a> 1.5.2 乘法定理</h3>
+<ul>
+<li>乘法定理：设P(A)&gt;0,则有P(AB)=P(B|A)P(A),称为乘法公式</li>
+</ul>
+<h3 id="153-全概率公式和贝叶斯公式"><a class="markdownIt-Anchor" href="#153-全概率公式和贝叶斯公式"></a> 1.5.3 全概率公式和贝叶斯公式</h3>
+<p>定义：</p>
+<hr />
+<h1 id="未完待续"><a class="markdownIt-Anchor" href="#未完待续"></a> 未完待续</h1>
+<p>更新时间：2022/1/4</p>
+
       </section>
 
       
@@ -357,7 +452,7 @@
       
     </div>
      
-    <p>&copy; 2021 <a href="/" target="_blank">寻玉</a></p>
+    <p>&copy; 2022 <a href="/" target="_blank">寻玉</a></p>
 
     
 
