@@ -144,17 +144,13 @@
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <p>这本书数学公式好多，敲到人麻，哭哭</p>
-<h1 id="第一章-概率论的基本概念"><a class="markdownIt-Anchor" href="#第一章-概率论的基本概念"></a> 第一章 概率论的基本概念</h1>
-<h2 id="10-前言"><a class="markdownIt-Anchor" href="#10-前言"></a> 1.0 前言</h2>
-<ul>
+<h1 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h1><h2 id="1-0-前言"><a href="#1-0-前言" class="headerlink" title="1.0 前言"></a>1.0 前言</h2><ul>
 <li><strong>确定性现象</strong>：在一定条件下必然发生的现象称为确定性现象</li>
 <li><strong>统计规律性</strong>：大量试验或者观察中所呈现出的固有规律性</li>
 <li><strong>随机现象</strong>：在大量重复实验中呈现出统计规律性的现象称为随机现象</li>
 </ul>
-<h2 id="11-随机试验"><a class="markdownIt-Anchor" href="#11-随机试验"></a> 1.1 随机试验</h2>
-<ul>
-<li>
-<p><strong>随机试验</strong>：随机试验具有以下三个特点：</p>
+<h2 id="1-1-随机试验"><a href="#1-1-随机试验" class="headerlink" title="1.1 随机试验"></a>1.1 随机试验</h2><ul>
+<li><p><strong>随机试验</strong>：随机试验具有以下三个特点：</p>
 <ol>
 <li>可以在相同的条件下重复的进行</li>
 <li>每次试验的可能结果不止一个，并且能事先明确试验的所有可能结果</li>
@@ -162,82 +158,130 @@
 </ol>
 </li>
 </ul>
-<h2 id="12-样本空间-随机事件"><a class="markdownIt-Anchor" href="#12-样本空间-随机事件"></a> 1.2 样本空间、随机事件</h2>
-<h3 id="121-样本空间"><a class="markdownIt-Anchor" href="#121-样本空间"></a> 1.2.1 样本空间</h3>
-<ul>
+<h2 id="1-2-样本空间、随机事件"><a href="#1-2-样本空间、随机事件" class="headerlink" title="1.2 样本空间、随机事件"></a>1.2 样本空间、随机事件</h2><h3 id="1-2-1-样本空间"><a href="#1-2-1-样本空间" class="headerlink" title="1.2.1 样本空间"></a>1.2.1 样本空间</h3><ul>
 <li><strong>样本空间</strong>：将随机试验E的所有结果组成的集合称为E的样本空间</li>
 <li><strong>样本点</strong>：将S.样本空间的元素即E的每个结果点称为样本点</li>
 </ul>
-<h3 id="122-随机事件"><a class="markdownIt-Anchor" href="#122-随机事件"></a> 1.2.2 随机事件</h3>
-<ul>
+<h3 id="1-2-2-随机事件"><a href="#1-2-2-随机事件" class="headerlink" title="1.2.2 随机事件"></a>1.2.2 随机事件</h3><ul>
 <li><strong>随机事件</strong>：称试验E的样本空间S的子集为E的随机事件，简称事件</li>
 <li><strong>事件发生</strong>：在每次试验中，当且仅当这一子集中的一个样本点出现时，称这一事件发生</li>
 <li><strong>基本事件</strong>：有一个样本点组成的单点集，称为基本事件</li>
 <li><strong>必然事件</strong>：样本空间S包含所有的样本点，它是S自身的子集，在每次试验中它总是发生的</li>
-<li><strong>不可能事件</strong>：空集<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∅</mi></mrow><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord">∅</span></span></span></span>不包含任何样本点，他也作为样本空间的子集，它在每次实验中都不发生，空集称为不可能事件</li>
+<li><strong>不可能事件</strong>：空集$\emptyset$不包含任何样本点，他也作为样本空间的子集，它在每次实验中都不发生，空集称为不可能事件</li>
 </ul>
-<h3 id="123-事件间的关系与事件的运算"><a class="markdownIt-Anchor" href="#123-事件间的关系与事件的运算"></a> 1.2.3 事件间的关系与事件的运算</h3>
-<ul>
-<li>
-<p>若A包含B且B包含A则称事件A和事件B相等</p>
+<h3 id="1-2-3-事件间的关系与事件的运算"><a href="#1-2-3-事件间的关系与事件的运算" class="headerlink" title="1.2.3 事件间的关系与事件的运算"></a>1.2.3 事件间的关系与事件的运算</h3><ul>
+<li><p>若A包含B且B包含A则称事件A和事件B相等</p>
 </li>
-<li>
-<p>若A和B中至少有一个事件发生则称A和B的和事件1发生</p>
+<li><p>若A和B中至少有一个事件发生则称A和B的和事件1发生</p>
 </li>
-<li>
-<p>若AB同时发生则称A和B的积事件发生</p>
+<li><p>若AB同时发生则称A和B的积事件发生</p>
 </li>
-<li>
-<p>当A发生B不发生时称事件A与事件B的差事件发生</p>
+<li><p>当A发生B不发生时称事件A与事件B的差事件发生</p>
 </li>
-<li>
-<p>若A与B的和事件是空则称事件A与B互不相容或互斥</p>
+<li><p>若A与B的和事件是空则称事件A与B互不相容或互斥</p>
 </li>
-<li>
-<p>A或B是全集且A交B是空集则称A与B互为逆事件，又称事件A与事件B互逆</p>
+<li><p>A或B是全集且A交B是空集则称A与B互为逆事件，又称事件A与事件B互逆</p>
 </li>
 </ul>
-<h2 id="13-频率与概率"><a class="markdownIt-Anchor" href="#13-频率与概率"></a> 1.3 频率与概率</h2>
-<h3 id="131-频率"><a class="markdownIt-Anchor" href="#131-频率"></a> 1.3.1 频率</h3>
-<ul>
-<li>
-<p><strong>频率</strong>：在相同条件下进行了n此试验，在这n次试验中，事件A发生的次数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">n_A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>称为事件A发生的频数。比值<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>A</mi></msub><mi mathvariant="normal">/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">n_A/n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathdefault">n</span></span></span></span>称为事件A发生的频率，并记成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f_n(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span></p>
+<h2 id="1-3-频率与概率"><a href="#1-3-频率与概率" class="headerlink" title="1.3 频率与概率"></a>1.3 频率与概率</h2><h3 id="1-3-1-频率"><a href="#1-3-1-频率" class="headerlink" title="1.3.1 频率"></a>1.3.1 频率</h3><ul>
+<li><p><strong>频率</strong>：在相同条件下进行了n此试验，在这n次试验中，事件A发生的次数$n_A$称为事件A发生的频数。比值$n_A/n$称为事件A发生的频率，并记成$f_n(A)$</p>
 </li>
-<li>
-<p><strong>概率</strong>：记作P（A）</p>
+<li><p><strong>概率</strong>：记作P（A）</p>
 </li>
 </ul>
-<h3 id="132-概率"><a class="markdownIt-Anchor" href="#132-概率"></a> 1.3.2 概率</h3>
-<h2 id="14-等可能概型古典概型"><a class="markdownIt-Anchor" href="#14-等可能概型古典概型"></a> 1.4 等可能概型（古典概型）</h2>
-<ul>
-<li>
-<p>特点：</p>
+<h3 id="1-3-2-概率"><a href="#1-3-2-概率" class="headerlink" title="1.3.2 概率"></a>1.3.2 概率</h3><h2 id="1-4-等可能概型（古典概型）"><a href="#1-4-等可能概型（古典概型）" class="headerlink" title="1.4 等可能概型（古典概型）"></a>1.4 等可能概型（古典概型）</h2><ul>
+<li><p>特点：</p>
 <ol>
 <li>样本空间只包含有限个元素</li>
 <li>每个基本事件发生的概率均等</li>
 </ol>
 </li>
-<li>
-<p>实际推断原理：概率很小的事件在以此试验中实际上几乎是不发生的（如果概率很小的事件在一次试验中发生了则有理由怀疑假设的正确性）</p>
+<li><p>实际推断原理：概率很小的事件在以此试验中实际上几乎是不发生的（如果概率很小的事件在一次试验中发生了则有理由怀疑假设的正确性）</p>
+</li>
+<li><p>超几何分布(摸球)：</p>
 </li>
 </ul>
-<h2 id="15-条件概率"><a class="markdownIt-Anchor" href="#15-条件概率"></a> 1.5 条件概率</h2>
-<h3 id="151-条件概率"><a class="markdownIt-Anchor" href="#151-条件概率"></a> 1.5.1 条件概率</h3>
-<ul>
-<li>定义： 设A，B是两个事件，且P(A)&gt;0,称</li>
+<p><img src="https://api2.mubu.com/v3/document_image/6c5d03df-873f-411c-834c-a1d7fc4045d9-11240310.jpg" alt=""></p>
+<h2 id="1-5-条件概率"><a href="#1-5-条件概率" class="headerlink" title="1.5 条件概率"></a>1.5 条件概率</h2><h3 id="1-5-1-条件概率"><a href="#1-5-1-条件概率" class="headerlink" title="1.5.1 条件概率"></a>1.5.1 条件概率</h3><ul>
+<li>定义： 设A，B是两个事件，且P(A)&gt;0,称<script type="math/tex; mode=display">
+P(B|A) = {P(A|B) \over P(A)}</script>为事件A发生的条件下事件B发生的条件概率</li>
 </ul>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mi mathvariant="normal">∣</mi><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mi mathvariant="normal">∣</mi><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(B|A) = {P(A|B) \over P(A)}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">∣</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mord">∣</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p>
-<p>为事件A发生的条件下事件B发生的条件概率</p>
-<h3 id="152-乘法定理"><a class="markdownIt-Anchor" href="#152-乘法定理"></a> 1.5.2 乘法定理</h3>
-<ul>
+<h3 id="1-5-2-乘法定理"><a href="#1-5-2-乘法定理" class="headerlink" title="1.5.2 乘法定理"></a>1.5.2 乘法定理</h3><ul>
 <li>乘法定理：设P(A)&gt;0,则有P(AB)=P(B|A)P(A),称为乘法公式</li>
 </ul>
-<h3 id="153-全概率公式和贝叶斯公式"><a class="markdownIt-Anchor" href="#153-全概率公式和贝叶斯公式"></a> 1.5.3 全概率公式和贝叶斯公式</h3>
-<p>定义：</p>
-<hr />
-<h1 id="未完待续"><a class="markdownIt-Anchor" href="#未完待续"></a> 未完待续</h1>
-<p>更新时间：2022/1/4</p>
+<h3 id="1-5-3-全概率公式和贝叶斯公式"><a href="#1-5-3-全概率公式和贝叶斯公式" class="headerlink" title="1.5.3 全概率公式和贝叶斯公式"></a>1.5.3 全概率公式和贝叶斯公式</h3><p>定义：设S为试验E的样本空间，$B_1,B_2,…,B_n$为E的一组事件.若</p>
+<ol>
+<li>$B_i,B_j=\emptyset,i \neq j,i,j=1,2,…,n$</li>
+<li>$B_1 \bigcup B_2 \bigcup … \bigcup B_n = S$</li>
+</ol>
+<p>则称$B_1,..,B_n$为样本空间S的一个划分，每次实验总会有且仅有一个B发生</p>
+<ul>
+<li><p>全概率公式：</p>
+<script type="math/tex; mode=display">
+P(A) = P(A|B_1)P(B_1)+...+P(A|B_n)P(B_n)</script></li>
+<li><p>贝叶斯公式：</p>
+<script type="math/tex; mode=display">
+P(B_i|A)={P(A|B_i)P(B_i)\over\sum \limits^{n}_{j=1}P(A|B_j)P(B_j)}</script></li>
+</ul>
+<p>如果样本空间S的一个划分是一个事件B和它的对立事件$\bar{B}$,则全概率公式和贝叶斯公式有下面的两种变形<br><img src="https://api2.mubu.com/v3/document_image/92094baf-9139-4671-ae3f-cda9e2896b2d-11240310.jpg" alt=""></p>
+<h2 id="1-6-独立性"><a href="#1-6-独立性" class="headerlink" title="1.6 独立性"></a>1.6 独立性</h2><ul>
+<li>如果P(AB)=P(A)P(B)，则两事件相互独立，简称独立</li>
+</ul>
+<h1 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h1><h2 id="2-2-离散型随机变量及其分布"><a href="#2-2-离散型随机变量及其分布" class="headerlink" title="2.2 离散型随机变量及其分布"></a>2.2 离散型随机变量及其分布</h2><h3 id="2-2-1-两点分布"><a href="#2-2-1-两点分布" class="headerlink" title="2.2.1 两点分布"></a>2.2.1 两点分布</h3><h3 id="2-2-2-伯努利试验、二项分布"><a href="#2-2-2-伯努利试验、二项分布" class="headerlink" title="2.2.2 伯努利试验、二项分布"></a>2.2.2 伯努利试验、二项分布</h3><ul>
+<li>二项分布记作X~b(n,p)</li>
+</ul>
+<h3 id="2-2-3-泊松分布"><a href="#2-2-3-泊松分布" class="headerlink" title="2.2.3 泊松分布"></a>2.2.3 泊松分布</h3><p><img src="https://api2.mubu.com/v3/document_image/2bda300e-9bd0-49bd-b0af-0ffba007427e-11240310.jpg" alt=""></p>
+<ul>
+<li><strong>以n，p为参数的二项分布的概率值可以由参数为$\lambda=np$的泊松分布的概率值近似</strong></li>
+</ul>
+<h2 id="2-3-分布函数"><a href="#2-3-分布函数" class="headerlink" title="2.3 分布函数"></a>2.3 分布函数</h2><ul>
+<li><p>定义：<br><img src="https://api2.mubu.com/v3/document_image/c2961c87-94ec-46e1-b424-3c8ea9dd8af6-11240310.jpg" alt=""></p>
+</li>
+<li><p>性质：</p>
+<ol>
+<li>F(x)是一个不减函数</li>
+<li>$0\leq F(x) \leq 1$</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-4-连续性随机变量及其概率密度"><a href="#2-4-连续性随机变量及其概率密度" class="headerlink" title="2.4 连续性随机变量及其概率密度"></a>2.4 连续性随机变量及其概率密度</h2><ul>
+<li><p>定义：<br><img src="https://api2.mubu.com/v3/document_image/ef538428-87fd-49e5-b37e-9d8165aa0de3-11240310.jpg" alt=""></p>
+</li>
+<li><p>性质：<br><img src="https://api2.mubu.com/v3/document_image/805c963b-021f-47bd-9e48-760b3d83d775-11240310.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="2-4-1-均匀分布"><a href="#2-4-1-均匀分布" class="headerlink" title="2.4.1 均匀分布"></a>2.4.1 均匀分布</h3><ul>
+<li><p>定义：<br><img src="https://api2.mubu.com/v3/document_image/198e546d-ab40-4731-a16c-1e427db3e043-11240310.jpg" alt=""></p>
+</li>
+<li><p>分布函数：<br><img src="https://api2.mubu.com/v3/document_image/176a6bc4-9cfa-4bf2-afa8-47f8350e2f96-11240310.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="2-4-2-指数分布"><a href="#2-4-2-指数分布" class="headerlink" title="2.4.2 指数分布"></a>2.4.2 指数分布</h3><ul>
+<li><p>定义：<br><img src="https://api2.mubu.com/v3/document_image/d2db9d97-3a19-43ba-abb6-02b1b179665b-11240310.jpg" alt=""></p>
+</li>
+<li><p>分布函数：<br><img src="https://api2.mubu.com/v3/document_image/c59428dc-deee-460d-97d0-99d339c0d194-11240310.jpg" alt=""></p>
+</li>
+<li><p>无记忆性性质：<br><img src="https://api2.mubu.com/v3/document_image/d2fc75fe-0dc1-4553-834e-25e4a2fbd001-11240310.jpg" alt=""></p>
+</li>
+</ul>
+<h3 id="2-4-3-正态分布"><a href="#2-4-3-正态分布" class="headerlink" title="2.4.3 正态分布"></a>2.4.3 正态分布</h3><ul>
+<li><p>定义：<br><img src="https://api2.mubu.com/v3/document_image/b674bf22-8c0d-47d6-9822-4e5f952014d5-11240310.jpg" alt=""></p>
+</li>
+<li><p>性质：<br><img src="https://api2.mubu.com/v3/document_image/a1937d0e-4eed-4dbe-adc4-804f660663d2-11240310.jpg" alt=""></p>
+</li>
+<li><p>分布函数：<br><img src="https://api2.mubu.com/v3/document_image/6a4626ac-6e0d-4883-bdae-d2704fbe2375-11240310.jpg" alt=""></p>
+</li>
+<li><p>标准正态分布<br><img src="https://api2.mubu.com/v3/document_image/139e02ba-c6eb-48bd-88b6-8f3547d87ab5-11240310.jpg" alt=""></p>
+</li>
+<li><p>标准正态分布引理<br><img src="https://api2.mubu.com/v3/document_image/1c591798-01ef-46fa-862a-bd595c220006-11240310.jpg" alt=""></p>
+</li>
+<li><p>分位点<br><img src="https://api2.mubu.com/v3/document_image/d50d20c7-09bc-4cdd-bd29-f28cc283f141-11240310.jpg" alt=""></p>
+</li>
+<li><p>线性函数服从正态分布<br><img src="https://api2.mubu.com/v3/document_image/54e37d9d-f2a4-48c7-a825-ddd175159447-11240310.jpg" alt=""></p>
+</li>
+</ul>
+<hr>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1><p>更新时间：2022/1/4</p>
 
       </section>
 
@@ -314,7 +358,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>11</span>
+        <span>12</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -326,7 +370,7 @@
         <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
 </svg>
-        17
+        18
       </div>
     </div>
   </div>
@@ -367,7 +411,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/">
-            复习资料 (5)
+            复习资料 (6)
           </a>
         </li>
       
@@ -397,7 +441,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-            读书笔记 (2)
+            读书笔记 (3)
           </a>
         </li>
       
@@ -414,7 +458,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 10px;" class="tags-cloud-0">c语言</a> <a href="/tags/python/" style="font-size: 10px;" class="tags-cloud-0">python</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%A3%B0%E6%98%8E/" style="font-size: 10px;" class="tags-cloud-0">博客声明</a> <a href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 16.67px;" class="tags-cloud-7">复习笔记</a> <a href="/tags/%E5%A4%A7%E4%BA%8C/" style="font-size: 20px;" class="tags-cloud-10">大二</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" style="font-size: 10px;" class="tags-cloud-0">学习记录</a> <a href="/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/" style="font-size: 10px;" class="tags-cloud-0">心得体会</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;" class="tags-cloud-0">教程</a> <a href="/tags/%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;" class="tags-cloud-0">数字系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;" class="tags-cloud-0">数据结构</a> <a href="/tags/%E6%97%A5%E5%B8%B8%E6%84%9F%E5%8F%97/" style="font-size: 10px;" class="tags-cloud-0">日常感受</a> <a href="/tags/%E6%9F%9A%E5%AD%90/" style="font-size: 10px;" class="tags-cloud-0">柚子</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;" class="tags-cloud-0">概率论</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E6%B5%8B%E8%AF%84/" style="font-size: 10px;" class="tags-cloud-0">游戏测评</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 10px;" class="tags-cloud-0">离散数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/" style="font-size: 13.33px;" class="tags-cloud-3">计算机系统基础</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;" class="tags-cloud-3">读书笔记</a>
+      <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 10px;" class="tags-cloud-0">c语言</a> <a href="/tags/python/" style="font-size: 10px;" class="tags-cloud-0">python</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%A3%B0%E6%98%8E/" style="font-size: 10px;" class="tags-cloud-0">博客声明</a> <a href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 17.5px;" class="tags-cloud-8">复习笔记</a> <a href="/tags/%E5%A4%A7%E4%BA%8C/" style="font-size: 20px;" class="tags-cloud-10">大二</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" style="font-size: 10px;" class="tags-cloud-0">学习记录</a> <a href="/tags/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/" style="font-size: 10px;" class="tags-cloud-0">心得体会</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;" class="tags-cloud-0">教程</a> <a href="/tags/%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;" class="tags-cloud-0">数字系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;" class="tags-cloud-0">数据结构</a> <a href="/tags/%E6%97%A5%E5%B8%B8%E6%84%9F%E5%8F%97/" style="font-size: 10px;" class="tags-cloud-0">日常感受</a> <a href="/tags/%E6%9F%9A%E5%AD%90/" style="font-size: 10px;" class="tags-cloud-0">柚子</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;" class="tags-cloud-0">概率论</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E6%B5%8B%E8%AF%84/" style="font-size: 10px;" class="tags-cloud-0">游戏测评</a> <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" style="font-size: 10px;" class="tags-cloud-0">离散数学</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/" style="font-size: 12.5px;" class="tags-cloud-3">计算机系统基础</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;" class="tags-cloud-0">计算机网络</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 15px;" class="tags-cloud-5">读书笔记</a>
     </div>
   </div>
 </section>
