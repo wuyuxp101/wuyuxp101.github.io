@@ -24,7 +24,7 @@
 
   
 
-  <title>数据库sql语句整理 | 寻玉&#39;s blog~</title>
+  <title>MySQL语句整理 | 寻玉&#39;s blog~</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(http://mms0.baidu.com/it/u=3766785423,1837975794&amp;fm=253&amp;app=120&amp;f=JPEG?w=640&amp;h=360)"></div>
+    <div class="post-image" style="background-image: url(http://img0.baidu.com/it/u=1893895953,3716861283&amp;fm=253&amp;app=120&amp;f=JPEG?w=1422&amp;h=800)"></div>
   
 
   <!-- navbar -->
@@ -101,12 +101,17 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">数据库sql语句整理</h1>
+          <h1 class="title-wrap">MySQL语句整理</h1>
           <h2 class="title-sub-wrap">
             <strong>寻玉</strong>
             <span>发布于</span>
             <time  class="article-date" datetime="2024-12-28T13:37:54.493Z" itemprop="datePublished">2024-12-28</time>
           </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2024-12-29T06:52:09.753Z" itemprop="dateUpdated">2024-12-29</time>
+            </h2>
           
           
           <ul class="wrap-list dark">
@@ -140,12 +145,22 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="待写"><a href="#待写" class="headerlink" title="待写"></a>待写</h1>
-    <figure class="figure-image">
-      <img src="http://mms1.baidu.com/it/u=2271292829,3831157084&fm=253&app=138&f=JPEG?w=500&h=668" alt="" loading="lazy" />
-      <figcaption></figcaption>
-    </figure>
-  
+        <p>前言：MySQL语句关键字大小写不敏感，即大小写都可以，但为了规范，一般都使用大写,变量名使用小写。以下整理了常用的sql语句，方便查阅。</p>
+<h1 id="常用基本数据类型"><a href="#常用基本数据类型" class="headerlink" title="常用基本数据类型"></a>常用基本数据类型</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>(n)<span class="comment">-- 固定长度，长度不足在末尾自动补足空格</span></span><br><span class="line"><span class="type">varchar</span>(n)<span class="comment">-- 可变长度，长度不足不补充空格</span></span><br><span class="line"><span class="type">int</span><span class="comment">-- 整数</span></span><br><span class="line"><span class="type">smallint</span><span class="comment">-- 小整数类型</span></span><br><span class="line"><span class="type">bigint</span><span class="comment">-- 大整数类型</span></span><br><span class="line"><span class="type">numeric</span>(p,d)<span class="comment">-- 算上符号有p位数字，小数点右有d位</span></span><br><span class="line"><span class="type">real</span>, <span class="type">double precision</span><span class="comment">-- 浮点数与双精度浮点数</span></span><br><span class="line"><span class="type">float</span>(n)<span class="comment">-- 精度为n的浮点数</span></span><br><span class="line"><span class="type">binary</span>(n)<span class="comment">-- 固定长度的二进制数</span></span><br><span class="line"><span class="type">varbinary</span>(n)<span class="comment">-- 可变长度的二进制数</span></span><br><span class="line"><span class="type">date</span><span class="comment">-- 日期类型</span></span><br><span class="line"><span class="type">time</span><span class="comment">-- 时间类型</span></span><br><span class="line"><span class="type">timestamp</span><span class="comment">-- 时间戳类型</span></span><br><span class="line">datetime<span class="comment">-- 日期时间类型</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建数据库</span></span><br><span class="line"><span class="keyword">CREATE</span> DATABASE 数据库名;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除数据库</span></span><br><span class="line"><span class="keyword">DROP</span> DATABASE 数据库名;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 使用数据库</span></span><br><span class="line">USE 数据库名; <span class="comment">-- 注意，进入MySQL后，默认是进入mysql数据库，需要先使用USE语句进入目标数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表</span></span><br><span class="line"><span class="keyword">CREATE TABLE</span> 表名(</span><br><span class="line">    列名<span class="number">1</span> 数据类型,</span><br><span class="line">    列名<span class="number">2</span> 数据类型,</span><br><span class="line">    ...</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除表</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> 表名;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查看表结构</span></span><br><span class="line"><span class="keyword">DESC</span> 表名;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">SHOW</span> COLUMNS <span class="keyword">FROM</span> 表名;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><p>数据与数据之间具有一对一、一对多、多对一、多对多关系，其中多对多关系举例可以为一个老师教多个班级，而每个班级需要多个任课老师。</p>
+<h2 id="记录Record"><a href="#记录Record" class="headerlink" title="记录Record"></a>记录Record</h2><p>数据库中的每一行数据就是一个记录，记录是数据库中的基本单位。</p>
+<h2 id="列Column"><a href="#列Column" class="headerlink" title="列Column"></a>列Column</h2><p>数据库中的每一列数据就是一个列，列是数据库中的基本单位。</p>
+<h2 id="主键Primary-Key"><a href="#主键Primary-Key" class="headerlink" title="主键Primary Key"></a>主键Primary Key</h2><p>主键是数据库中唯一标识一条记录的字段，主键可以是一个字段，也可以是多个字段，如果是多个字段，则称为复合主键。</p>
+<p>由于主键的作用十分重要，如何选取主键会对业务开发产生重要影响。如果我们以学生的身份证号作为主键，似乎能唯一定位记录。然而，身份证号也是一种业务场景，如果身份证号升位了，或者需要变更，作为主键，不得不修改的时候，就会对业务产生严重影响。所以，<strong>选取主键的一个基本原则是：不使用任何业务相关的字段作为主键</strong>。因此，身份证号、手机号、邮箱地址这些看上去可以唯一的字段，均不可用作主键。<br>作为主键最好是完全业务无关的字段，我们一般把这个字段命名为id。</p>
+<p>id通常分为两种类型：自增id和UUID。</p>
+<ul>
+<li>自增id：优点是连续，缺点是占用空间大，并且有上下限。</li>
+<li>UUID：也称GUID,优点是占用空间小，缺点是字符串，没有顺序，查询效率低。GUID算法通过网卡MAC地址、时间戳和随机数保证任意计算机在任意时间生成的字符串都是不同的，大部分编程语言都内置了GUID算法，可以自己预算出主键。</li>
+</ul>
+<p>需要注意的是：如果使用INT自增类型，那么当一张表的记录数超过2147483647（约21亿）时，会达到上限而出错。使用BIGINT自增类型则可以最多约922亿亿条记录。当然，即使是BIGINT，也会遇到上限问题。使用UUID则不会有上限问题，但由于作为字符串，比较效率较低。所以，综合考虑，自增ID是最合理的选择。</p>
 
       </section>
 
