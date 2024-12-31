@@ -24,7 +24,7 @@
 
   
 
-  <title>归档 | 寻玉&#39;s blog~</title>
+  <title>matplotlib常用函数 | 寻玉&#39;s blog~</title>
 
   
 
@@ -46,9 +46,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(http://mms2.baidu.com/it/u=4177099119,58517237&amp;fm=253&amp;app=120&amp;f=JPEG?w=704&amp;h=396)"></div>
+    <div class="post-image" style="background-image: url(https://img0.baidu.com/it/u=411823100,295677215&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=837&amp;h=500)"></div>
   
 
   <!-- navbar -->
@@ -89,21 +89,39 @@
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">归档</h1>
-        <h2 class="title-sub-wrap">共有6篇文章</h2>
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">matplotlib常用函数</h1>
+          <h2 class="title-sub-wrap">
+            <strong>寻玉</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2024-12-30T23:55:07.878Z" itemprop="datePublished">2024-12-31</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/python/">📒 python</a></li>
+    
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E5%AE%9E%E7%94%A8%E5%BA%93/">🏷️ 实用库</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -111,98 +129,57 @@
   
 </header>
 
-    <!-- 归档 -->
+    <!-- 文章 -->
 
-<!-- post list container -->
-
-
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
-  <div class="article-info">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="matplotlib常用函数"><a href="#matplotlib常用函数" class="headerlink" title="matplotlib常用函数"></a>matplotlib常用函数</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个图形窗口</span></span><br><span class="line">plt.figure()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个子图，参数为子图的行数、列数和索引，行优先命名索引</span></span><br><span class="line">plt.subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># x为x轴数据，可为列表或数组；</span></span><br><span class="line"><span class="comment"># y同理；</span></span><br><span class="line"><span class="comment"># format_string 为控制曲线的格式字符串；</span></span><br><span class="line"><span class="comment"># **kwargs 第二组或更多的（x, y, format_string）</span></span><br><span class="line"><span class="comment"># format_string: 由 颜色字符、风格字符和标记字符组成。</span></span><br><span class="line"><span class="comment"># 颜色字符：&#x27;b&#x27;蓝色 ；&#x27;#008000&#x27;RGB某颜色；&#x27;0.8&#x27;灰度值字符串</span></span><br><span class="line"><span class="comment"># 风格字符：&#x27;-&#x27;实线；&#x27;–&#x27;破折线； &#x27;-.&#x27;点划线； &#x27;：&#x27;虚线 ； &#x27;&#x27;&#x27;&#x27;无线条</span></span><br><span class="line"><span class="comment"># 标记字符：&#x27;.&#x27;点标记 &#x27;o&#x27; 实心圈 &#x27;v&#x27;倒三角 &#x27;^&#x27;上三角</span></span><br><span class="line"><span class="comment"># eg： plt.plot(a, a1.5, &#x27;go-&#x27;, a, a2, &#x27;*&#x27;) 第二条无曲线，只有点</span></span><br><span class="line">plt.plot(x, y, format_string, **kwargs):</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题</span></span><br><span class="line">plt.title(<span class="string">&#x27;Title&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加文本，参数为位置和文本内容</span></span><br><span class="line">plt.text()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加x轴标签</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;X Label&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加y轴标签</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y Label&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置x轴范围</span></span><br><span class="line">plt.xlim([-<span class="number">1</span>, <span class="number">10</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置x，y轴范围</span></span><br><span class="line">plt.axis([-<span class="number">1</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加图例</span></span><br><span class="line">plt.legend([<span class="string">&#x27;Label&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示图形</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图形，参数为文件名和分辨率</span></span><br><span class="line">plt.savefig(<span class="string">&#x27;test&#x27;</span>, dpi = <span class="number">600</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># pyplot默认并不支持中文显示，需要 rcParams 修改字体来实现</span></span><br><span class="line"><span class="comment"># rcParams的属性：</span></span><br><span class="line"><span class="comment"># &#x27;font.family&#x27; 用于显示字体的名字</span></span><br><span class="line"><span class="comment"># &#x27;font.style&#x27; 字体风格，正常&#x27;normal&#x27; 或斜体&#x27;italic&#x27;</span></span><br><span class="line"><span class="comment"># &#x27;font.size&#x27; 字体大小，整数字号或者&#x27;large&#x27; &#x27;x-small&#x27;</span></span><br><span class="line"><span class="comment"># eg:</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.family&#x27;</span>] = <span class="string">&#x27;STSong&#x27;</span></span><br><span class="line">matplotlib.rcParams[<span class="string">&#x27;font.size&#x27;</span>] = <span class="number">20</span></span><br><span class="line"></span><br><span class="line">plt.plot(x,y , fmt) <span class="comment"># 绘制坐标图</span></span><br><span class="line">plt.boxplot(data, notch, position)<span class="comment"># 绘制箱形图</span></span><br><span class="line">plt.bar(left, height, width, bottom) <span class="comment"># 绘制条形图</span></span><br><span class="line">plt.barh(width, bottom, left, height) <span class="comment"># 绘制横向条形图</span></span><br><span class="line">plt.polar(theta, r) <span class="comment"># 绘制极坐标图</span></span><br><span class="line">plt.pie(data, explode) <span class="comment"># 绘制饼图</span></span><br><span class="line">plt.scatter(x, y) <span class="comment"># 绘制散点图</span></span><br><span class="line">plt.hist(x, bings, normed) <span class="comment"># 绘制直方图</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-        <!-- archive card -->
-<div class="markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-  <h1>2024</h1>  
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-30T23:55:07.878Z" itemprop="datePublished">2024-12-31</time>
-        </span>
-          
-            <a href="/2024/12/31/matplotlib/" itemprop="url">
-              <strong>matplotlib常用函数</strong>
-            </a>
-          
-
-      </div>
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-29T12:54:42.813Z" itemprop="datePublished">2024-12-29</time>
-        </span>
-          
-            <a href="/2024/12/29/leetcode%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url">
-              <strong>(no title)</strong>
-            </a>
-          
-
-      </div>
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-29T12:54:31.807Z" itemprop="datePublished">2024-12-29</time>
-        </span>
-          
-            <a href="/2024/12/29/%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/" itemprop="url">
-              <strong>(no title)</strong>
-            </a>
-          
-
-      </div>
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-29T12:54:20.220Z" itemprop="datePublished">2024-12-29</time>
-        </span>
-          
-            <a href="/2024/12/29/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/" itemprop="url">
-              <strong>(no title)</strong>
-            </a>
-          
-
-      </div>
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-29T12:53:59.397Z" itemprop="datePublished">2024-12-29</time>
-        </span>
-          
-            <a href="/2024/12/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" itemprop="url">
-              <strong>(no title)</strong>
-            </a>
-          
-
-      </div>
-  
-      <div>
-        <span>
-          <time  class="article-date" datetime="2024-12-28T13:37:54.493Z" itemprop="datePublished">2024-12-28</time>
-        </span>
-          
-            <a href="/2024/12/28/%E6%95%B0%E6%8D%AE%E5%BA%93sql%E8%AF%AD%E5%8F%A5%E6%95%B4%E7%90%86/" itemprop="url">
-              <strong>MySQL语句整理</strong>
-            </a>
-          
-
-      </div>
-  
+    <div class="card-text">
+      
+        <a href="/2024/12/29/leetcode%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">(no title)</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
 </div>
+          
+        </nav>
+      
 
-    
-  </div>
-  <div class="widget-info">
-    <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-body">
     
       <img src="http://mms0.baidu.com/it/u=3569424312,4116514051&amp;fm=253&amp;app=138&amp;f=JPEG?w=380&amp;h=380" class="soft-size--round soft-style--box" alt="寻玉">
@@ -237,7 +214,9 @@
   </div>
 </section>
 
-    
+      
+
+      
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-title">
     <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -251,7 +230,7 @@
 </section>
 
 
-    <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-title">
     <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
@@ -277,7 +256,7 @@
   </div>
 </section>
 
-    <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-title">
     <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
@@ -290,15 +269,9 @@
     </div>
   </div>
 </section>
-  </div>
-</article>
-
+    </div>
+  </article>
 </div>
-
-
-
-
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -355,6 +328,16 @@
 
   
   
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
 
 
 
