@@ -24,7 +24,7 @@
 
   
 
-  <title>Hello World | 寻玉&#39;s blog</title>
+  <title>transformer | 寻玉&#39;s blog</title>
 
   
 
@@ -101,12 +101,17 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">transformer</h1>
           <h2 class="title-sub-wrap">
             <strong>寻玉</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2025-10-28T14:42:04.950Z" itemprop="datePublished">2025-10-28</time>
+            <time  class="article-date" datetime="2025-10-27T00:07:14.980Z" itemprop="datePublished">2025-10-27</time>
           </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2025-10-29T10:17:06.627Z" itemprop="dateUpdated">2025-10-29</time>
+            </h2>
           
           
           <ul class="wrap-list dark">
@@ -136,19 +141,89 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><p><strong>需要一定的RNN知识，此处不介绍RNN具体知识，相关内容请自己学习</strong></p>
+<h2 id="语义表示"><a href="#语义表示" class="headerlink" title="语义表示"></a>语义表示</h2><p>​        在深度学习领域，表示词或者字使用向量方法，即整个语言系统对应一个高维的向量空间，而一个字或者词则对应一个向量，向量间距离的远近则代表了表示词与词之间关系的亲疏（比如<strong>黑人和棉花、鞭子等词的距离就会比较贴近</strong>，而wy和化学的距离就会比较远），这里向量表示词语时包含两个非常重要的问题：<strong>空间的维数应该是多少、向量的长度应该是多少</strong>，也由此引入了几种重要的表示方法：</p>
+<ol>
+<li>tokenizer（分词器）：整个空间的维数是1，即每个词对应一个唯一的数字，两个词的亲疏关系直接表示为两个数字的绝对值大小，但这种表示无法体现出词语本身复杂的语义而只能表示单个语义（如苹果又可以表示手机又可以表示水果，但苹果只能对应一个数字），且无法表示组合语义（如苹果对应1，香蕉对应2，那么香蕉苹果的组合语义只能对应数字3，但数字3应该对应其他独立词语）</li>
+<li>one-hot（独热编码）：整个空间的维数等于词语的个数，而向量的长度为1，也就是说，在这中表示下，所有词对应向量都是相互正交的，这种表示方式一方面需要巨量的空间存储矩阵，另一方面由于向量间距离为0，完全无法表示任何词间关系，但表达组合语义方便。</li>
+</ol>
+<p><img src="D:\paper\assets\image-20251027094025747.png" alt="image-20251027094025747"></p>
+<p>​	上述两种方式体现了极限情况下不同向量空间所能表示的信息密度，<strong>one-hot信息密度过于稀疏而tokenizer的信息密度则过于稠密</strong>，因此现实情况则是<strong>结合这两者</strong>来实现向量空间，即选取一个高维但没那么高维且向量长度不为1的空间。</p>
+<h2 id="编解码"><a href="#编解码" class="headerlink" title="编解码"></a>编解码</h2><ul>
+<li>seq2seq问题：<strong>序列到序列（Sequence-to-Sequence）<strong>模型（最早是RNN类模型）所解决的一类问题，即</strong>将一个输入序列转换成一个输出序列的任务</strong>。这类问题的核心特点是：<ol>
+<li><strong>输入和输出都是序列（sequences）</strong>，例如文本、语音或时间序列（有先后关系）数据。</li>
+<li><strong>输入序列和输出序列的长度通常是可变的且不一定相等</strong>。</li>
+</ol>
+</li>
+</ul>
+<p>为解决s2s问题的核心特点2（输入长度与输出长度不对应，最初的RNN的输出与输入长度对应），于是提出了编码和解码结构（后来的RNN也有这个编解码的区分）</p>
+<h1 id="transformer"><a href="#transformer" class="headerlink" title="transformer"></a>transformer</h1><h2 id="提出为了解决的问题"><a href="#提出为了解决的问题" class="headerlink" title="提出为了解决的问题"></a>提出为了解决的问题</h2><h3 id="1-难以并行化（限制了训练速度）"><a href="#1-难以并行化（限制了训练速度）" class="headerlink" title="1. 难以并行化（限制了训练速度）"></a>1. 难以并行化（限制了训练速度）</h3><p>这是提出 Transformer 的最主要原因。</p>
+<ul>
+<li><strong>RNN 的问题：</strong> RNN 在处理序列时是<strong>严格顺序化</strong>的。计算当前时间步（$t$）的隐藏状态和输出时，必须先完成前一个时间步（$t-1$）的计算，因为 $t-1$ 的隐藏状态是 $t$ 的输入之一。这种<strong>顺序依赖性</strong>使得模型无法在训练时充分利用现代 GPU 的并行计算能力。序列越长，训练所需的时间就越久。</li>
+<li><strong>Transformer 的解决：</strong> Transformer 完全抛弃了循环和卷积结构，转而完全依赖<strong>自注意力机制（Self-Attention）</strong>。这使得模型可以<strong>同时</strong>处理序列中的所有输入元素，从而实现<strong>高度并行化</strong>，极大地加快了模型的训练速度。</li>
+</ul>
+<h3 id="2-难以捕捉长距离依赖关系（信息丢失）"><a href="#2-难以捕捉长距离依赖关系（信息丢失）" class="headerlink" title="2. 难以捕捉长距离依赖关系（信息丢失）"></a>2. 难以捕捉长距离依赖关系（信息丢失）</h3><p>虽然 LSTM 和 GRU 缓解了传统 RNN 的梯度消失问题，但在处理<strong>超长序列</strong>时，仍然存在挑战。</p>
+<ul>
+<li><strong>RNN 的问题：</strong> 序列越长，第一个词的信息需要经过越多的时间步才能传递到最后一个词。在这个长距离的传递过程中，早期信息可能会逐渐<strong>稀释或丢失</strong>（即“长期依赖”问题）。</li>
+<li><strong>Transformer 的解决：</strong> 自注意力机制允许模型在计算序列中任一位置（如最后一个词）的表示时，直接<strong>一步到位</strong>地关注到序列中的所有其他位置（如第一个词）。这种“直达”连接使得模型能够更有效地捕捉和利用长距离的依赖关系，而不受序列距离的限制。</li>
+</ul>
+<h3 id="3-固定长度的上下文向量（Seq2Seq-的瓶颈）"><a href="#3-固定长度的上下文向量（Seq2Seq-的瓶颈）" class="headerlink" title="3. 固定长度的上下文向量（Seq2Seq 的瓶颈）"></a>3. 固定长度的上下文向量（Seq2Seq 的瓶颈）</h3><p>在基于 RNN 的 Seq2Seq 模型中（尤其是在引入注意力机制之前），编码器需要将整个输入序列的信息压缩到一个<strong>固定长度</strong>的上下文向量中。</p>
+<ul>
+<li><strong>RNN-Seq2Seq 的问题：</strong> 无论输入句子有多长，所有的信息都必须塞进这个固定大小的向量。对于非常长的或信息量大的句子，这个上下文向量很容易成为<strong>信息瓶颈</strong>，导致解码器无法恢复所有必要的信息。</li>
+<li><strong>Transformer 的解决：</strong> 虽然不是直接解决，但 Transformer 通过其注意力机制，在解码的每一步都可以<strong>直接访问</strong>编码器输出的<strong>所有</strong>中间状态（即键K和值V）。这相当于提供了一个动态、非固定的“上下文”，消除了固定长度上下文向量带来的信息瓶颈。</li>
+</ul>
+<h2 id="编解码器总体结构"><a href="#编解码器总体结构" class="headerlink" title="编解码器总体结构"></a>编解码器总体结构</h2><p>结构图如下，图源attention is all you need</p>
+<p><img src="D:\paper\assets\image-20251027082059069.png" alt="image-20251027082059069"></p>
+<h3 id="inputs"><a href="#inputs" class="headerlink" title="inputs"></a>inputs</h3><p>输入的是一组标签，即每个词都有特殊的编号，并且除了词之外会有类似于意味着开始和提示结束等特殊功能的标签，</p>
+<h3 id="input-embedding"><a href="#input-embedding" class="headerlink" title="input embedding"></a>input embedding</h3><p>训练好的input embedding层矩阵E是一个维度为 $V \times d_{model}$ 的矩阵，其中：</p>
+<ul>
+<li>$V$ 是词汇表的大小（即所有唯一 Token 的数量）。</li>
+<li>$d_{model}$ 是你选择的嵌入向量的维度。</li>
+</ul>
+<p><img src="D:\paper\assets\image-20251027141732750.png" alt="image-20251027141732750"></p>
+<p>​	此时，每个token对应E中一行（transformer使用的这种方法查找表做法），按照这种方式，若一句话被tokenizer成n个token，这n个标签会对应E中n个向量，这n个向量又会被整理成一个$n \times d_{model}$ 的矩阵，这就是标签经过input embedding层后获得的结果</p>
+<p>​	事实上，由token转化为的嵌入向量的每一个维度本身就有意义，如下图所示，维度可能隐性的表示了这些分类（由于深度学习的不可解释性，这里只是帮助理解，因此是隐性的，并非真实的），这里事实上本质与cnn有一定联系或者异曲同工之妙。</p>
+<p><img src="D:\paper\assets\image-20251027142842019.png" alt="image-20251027142842019"></p>
+<p>​	前面讲到想要得到token对应的嵌入向量是<strong>需要一个提前训练好的inputs embedding矩阵</strong>，那接下就讲一下如何通过训练获得这个embedding矩阵，主要是下述两种方法：</p>
+<ol>
+<li>连续词袋模型 (CBOW - Continuous Bag-of-Words)</li>
+</ol>
+<ul>
+<li><strong>工作原理：</strong> CBOW 模型是使用<strong>上下文词语（Context Words）<strong>来</strong>预测</strong>当前的<strong>中心词（Target Word）</strong>。（想象高中物理——力的合成）</li>
+<li><strong>输入：</strong> 中心词周围的词语的嵌入向量（上下文）。</li>
+<li><strong>输出：</strong> 预测中心词的概率分布。</li>
+<li><strong>特点：</strong> 训练速度相对较快，对高频词的处理效果通常更好。</li>
+</ul>
+<p><img src="D:\paper\assets\image-20251027144444791.png" alt="image-20251027144444791"></p>
+<ol start="2">
+<li>Skip-gram 模型</li>
+</ol>
+<ul>
+<li><strong>工作原理：</strong> Skip-gram 模型正好相反，它是使用当前的<strong>中心词</strong>来<strong>预测</strong>其周围的<strong>上下文词语</strong>。（想象高中物理——力的分解）</li>
+<li><strong>输入：</strong> 中心词的嵌入向量。</li>
+<li><strong>输出：</strong> 预测上下文词语的概率分布。</li>
+<li><strong>特点：</strong> 训练速度稍慢，但在处理低频词（生僻词）和大型语料库时效果通常更佳。</li>
+</ul>
+<h3 id="位置编码PE（Postional-encoding）"><a href="#位置编码PE（Postional-encoding）" class="headerlink" title="位置编码PE（Postional encoding）"></a>位置编码PE（Postional encoding）</h3><p>​	位置编码（Positional Encoding）是 Transformer 架构中一个非常巧妙且核心的设计，用于解决其<strong>并行计算带来的顺序信息丢失</strong>问题。</p>
+<p><img src="D:\paper\assets\image-20251027143630643.png" alt="image-20251027143630643"></p>
+<p>​	最终，位置编码向量 $\mathbf{PE}$ 是通过<strong>向量加法</strong>（Element-wise Addition）的方式，与原始的词嵌入向量 $\mathbf{E}_{\text{word}}$ 结合，形成最终送入编码器和解码器的输入：</p>
+<p>​							$$\mathbf{E}<em>{\text{final}} &#x3D; \mathbf{E}</em>{\text{word}} + \mathbf{PE}$$</p>
+<p>​	使用周期函数而非简单的学习参数或整数编码，有以下优势：</p>
+<ol>
+<li><strong>无限序列长度的泛化能力：</strong> 由于是基于函数计算，即使模型在训练中没有见过非常长的句子，它也可以根据函数模式计算出新位置的编码，从而具有<strong>泛化到更长序列的能力</strong>。</li>
+<li><strong>相对位置信息的编码：</strong> 正弦和余弦函数的一个关键特性是，对于任意固定的偏移 $k$，$\mathbf{PE}(\text{pos} + k)$ 可以表示为 $\mathbf{PE}(\text{pos})$ 的<strong>线性函数</strong>。这使得模型更容易通过注意力机制来学习和识别<strong>相对位置</strong>（例如，“前一个词”或“相隔两个词”）。</li>
+<li><strong>确定性且有界：</strong> 编码值始终在 $[-1, 1]$ 之间，避免了绝对位置索引值过大导致的训练不稳定问题。</li>
+</ol>
+<h3 id="注意力机制attention"><a href="#注意力机制attention" class="headerlink" title="注意力机制attention"></a>注意力机制attention</h3><p>​	在架构图上写的是multi-attention（多头注意力机制），但这里先不介绍多头注意力机制，先来介绍注意力机制</p>
+<p><img src="D:\paper\assets\image-20251027145621205.png" alt="image-20251027145621205"></p>
+<p>​	如果你仔细观察了架构图，你会发现在经过PE之后，有三个箭头进入了attention中，这三个箭头意味着attention层中有三个矩阵Q、K、V，这三个矩阵分别的意义是</p>
+<h2 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h2><p><img src="D:\paper\assets\image-20251027082324107.png" alt="image-20251027082324107"></p>
+<ul>
+<li>Decoder-only：代表为GPT，解码器的功能是生成</li>
+<li>Encoder-only：代表为BERT，功能是学习和理解文本</li>
+<li>Encoder-Decoder：代表为T5、BART，</li>
+</ul>
+<p><img src="https://github.com/wuyuxp101/my-images/blob/main/icons-192.png?raw=true" alt="科学上网访问"></p>
 
       </section>
 
@@ -156,20 +231,20 @@
       
         <nav class="article-nav">
           
-          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2025/10/27/transformer/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">transformer</h2>
+        <a href="/2025/10/28/hello-world/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Hello World</h2>
         </a>
       
-      <div class="card-text--row">Older</div>
+      <div class="card-text--row">Newer</div>
     </div>
   </article>
 </div>
+          
           
         </nav>
       

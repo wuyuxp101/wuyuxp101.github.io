@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", function() {
   let lastRefreshTime   = 0;
   let frameCount        = 0;
   let refreshRate       = 0;
-  let theme             = window.localStorage.getItem('theme') || '';
+  let theme             = window.localStorage.getItem('theme') || 'theme-dark';
 
   theme && html.classList.add(theme)
 
@@ -71,7 +71,7 @@ window.addEventListener("DOMContentLoaded", function() {
   document.querySelector('#theme-auto').addEventListener('click', function() {
     html.classList.remove('theme-light')
     html.classList.remove('theme-dark')
-    window.localStorage.setItem('theme', '')
+    window.localStorage.setItem('theme', 'theme-dark')
   })
 
   // mobile nav click
